@@ -1,0 +1,8 @@
+<view class='com_lazy' wx:if="{{showContext}}">
+  <text>玩命加载中...</text>
+  <view style='position:fixed;top:0px;opacity:0'>
+    <image bindload="imgLoaded" wx:for = "{{imgList}}" wx:key="item" src="https://static.zhongan.com/website/health/iybApp/activity/activity618/{{item}}"></image>
+  </view>
+</view>
+
+<slot wx:else></slot>

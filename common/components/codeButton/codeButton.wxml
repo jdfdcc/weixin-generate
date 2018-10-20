@@ -1,0 +1,1 @@
+<button class="btn_code btn_class" disabled='{{btnTextYzm != "获取验证码"}}' bindtap='getCode'>{{btnTextYzm }}</button>

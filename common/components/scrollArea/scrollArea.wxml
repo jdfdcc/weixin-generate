@@ -1,0 +1,6 @@
+<view class='scorll_area' style='top: {{top}}; height: {{height}}'>
+  <view wx:for="{{list}}" class='scoll_item'  style="animation: {{item.ani}};top: {{item.top}}" wx:key="{{index}}">
+    <image src='{{item.headImage}}'></image>
+    <text>{{item.content}}</text>
+  </view>
+</view>

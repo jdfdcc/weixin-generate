@@ -1,0 +1,64 @@
+/*------------------------ 定义全局样式START ------------------------*/
+@import './assets/wxss/font.wxss';
+@import './assets/wxss/animation.wxss';
+
+.var{
+  --white: red;
+}
+.container {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.btn:active{
+  transform: scale(.95);
+}
+
+.btn_active:active{
+  transform: scale(.95);
+}
+
+
+.active_gray:active{
+  background:rgb(245, 244, 245);
+}
+
+.page_gray{
+  background:rgb(245, 244, 245);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.page_white{
+  background:#fff;
+}
+.iphoneX-bottom{
+  padding-bottom:34rpx;
+}
+
+
+.card_item{
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  margin-left: 30rpx;
+  border-bottom:1px solid #E0E0E0;
+  box-sizing: border-box;
+}
+.card_item:last-child{
+  border: none;
+}
+.card_item .title{
+  font-size: 30rpx;
+  color: #333333;
+  letter-spacing: 0;
+  flex: 0 0 200rpx;
+}
+
+.card_item .right{
+  flex: 1;
+}
+.no_border::after{
+  border: none;
+}

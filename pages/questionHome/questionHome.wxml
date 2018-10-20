@@ -1,0 +1,10 @@
+<view class='page_home'>
+  <view class='main_home'>
+    <!-- <button>智能练习</button>
+    <button>全真模拟</button>
+    <button>章节练习</button>
+    <button>我的错题</button> -->
+
+    <button class='btn_exam btn' bindtap='toExam'>今日练习</button>
+  </view>
+</view>

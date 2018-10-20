@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "modalTime": "/common/components/modalTime/modalTime",
+    "formPage": "/common/components/formPage/formPage",
+    "scrollArea": "/common/components/scrollArea/scrollArea",
+    "authButton": "/common/components/authButton/authButton",
+    "codeButton": "/common/components/codeButton/codeButton"
+  }
+}

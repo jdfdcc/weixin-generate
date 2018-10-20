@@ -1,0 +1,22 @@
+<modalAlert show="{{show}}"> 
+  <view class='com_model_time'>
+    <image bindtap="close" class="close" src="https://static.iyunbao.com/website/health/iybApp/iyb_mpvue/exp_policy/close.png" alt="" />
+
+    <view class='title'>请选择时间</view>
+
+    <view class='btn_area'>
+      <button data-id='1' bindtap='chooseTab' class="{{tab === 1 ? 'active': ''}}">保多少年</button>
+      <button data-id='2' bindtap='chooseTab' class="{{tab === 2 ? 'active': ''}}">保至多少岁</button>
+    </view>
+
+    <view class="text-page">
+        <picker-view style="width: 100%; height: 140px;" value="{{selectValue}}" bindchange="bindChange" >
+          <picker-view-column>
+              <view wx:for="{{datas}}" wx:key="{{index}}" class='scorll_item'>{{item.name}}</view>
+          </picker-view-column>
+        </picker-view>
+    </view>
+    
+    <button class='btn_ok' bindtap='submit'>确定</button>
+  </view>
+</modalAlert>

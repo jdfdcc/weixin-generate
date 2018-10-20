@@ -1,0 +1,57 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": [
+			{
+				"type": "suffix",
+				"value": ".md"
+			}
+		]
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.4",
+	"appid": "wxcb03144d55fc82c4",
+	"projectname": "%E8%B6%85%E6%9C%AC%E5%AD%A6%E9%99%A2",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "调试专用",
+					"pathName": "pages/exam/exam",
+					"query": "policyId=88B932000029810413&policyStatus=2"
+				},
+				{
+					"id": -1,
+					"name": "调试专用",
+					"pathName": "pages/questionHome/questionHome",
+					"query": "policyId=88B932000029810413&policyStatus=2"
+				}
+			]
+		}
+	}
+}

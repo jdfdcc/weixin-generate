@@ -1,0 +1,28 @@
+<modalTime  value="{{value}}" show="{{show}}" bind:ok="choose">
+</modalTime>
+<formPage>
+  弹出层: modalAlert
+  <button bindtap='show' type="default">展示弹出框</button>
+</formPage>
+授权按钮: authButton
+<authButton > 
+  已经授权
+</authButton>
+
+验证码按钮: codeButton
+<view class='yzm_ipt '>
+  <input value="{{mobile}}" placeholder='请输入手机号码' bindinput="changeMobile"></input>
+  <codeButton mobile="{{mobile}}" />
+</view>
+
+数据滚动 : scrollArea
+<scrollArea top="510px" scrollList="{{list}}" >
+</scrollArea>
+
+<button bindtap='toRegister'>测试</button>
+<button id="ele_test" bindtap='getElement'>获取元素信息</button>
+<button id="ele_test" bindtap='drawImage'>生成海报</button>
+
+
+
+<canvas canvas-id="myCanvas" style="position:fixed;opacity:0; width: 750px; height: 1344px;"/>

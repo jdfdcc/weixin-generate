@@ -1,0 +1,26 @@
+.page_home{
+  min-height: 100vh;
+  padding-top: 30vh;
+  box-sizing: border-box;
+  background: url('http://wap.chaobenxueyuan.com/images/home.png');
+  background-position-y: -100rpx;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.title{
+  text-align: center;
+  color: #fff;
+}
+
+.btn_login{
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 100rpx;
+  left: calc(50vw - 150rpx);
+  border-radius: 50rpx;
+  background: rgb(50, 140, 255);
+  color: #fff;
+}

@@ -1,0 +1,45 @@
+<!-- 输入框 -->
+<view class='form_item form_input' wx:if ="{{item.type === 'input'}}">
+  <input value='{{value}}' placeholder="{{item.placeholder}}" bindblur='inputChange' />
+  <image mode="widthFix" bindtap='clearValue' wx:if="{{value && !item.hasCode}}" src='https://static.iyunbao.com/website/health/iybApp/iyb_mpvue/center/x.png'></image>
+  <image mode="widthFix" bindtap='clickIcon' wx:if="{{item.icon}}" src='{{item.icon}}'></image>
+  <codeButton mobile="{{value}}" wx:if="{{item.hasCode}}" />
+</view>
+
+<!-- 日期 -->
+<label for="date" class='form_item' wx:if ="{{item.type === 'date' || item.type === 'birthdate'}}">
+  <picker class='date' mode="date" start="{{item.start || '1900-09-01'}}"  end="{{item.type === 'birthdate' ? endDate : (item.type === 'bdate')}}" value="{{value}}" bindchange="inputChange">
+    <view>
+      {{ value || item.placeholder }}
+    </view>
+  </picker>
+  <image class='icon icon_right' bindtap='clickIcon' src='{{item.icon || "https://static.iyunbao.com/website/health/iybApp/iyb_mpvue/icon/icon_right1.png"}}'></image>
+</label>
+
+<!-- 选择框 -->
+<label for="date" class='form_item' wx:if ="{{item.type === 'select'}}">
+  <picker class="date" range="{{item.actions}}" value="{{value}}" bindchange="inputChange">
+      <view>
+          {{ item.actions[value] || item.placeholder }}
+      </view>
+  </picker>
+  <image class='icon icon_right' bindtap='clickIcon' src='{{item.icon || "https://static.iyunbao.com/website/health/iybApp/iyb_mpvue/icon/icon_right1.png"}}'></image>
+</label>
+
+<!-- modalTime
+<label for="date" class='form_item' wx:if ="{{item.type === 'modalTime'}}" bindtap='showModalTime'>
+  <text>{{ value || item.placeholder }}</text>
+  <image class='icon' bindtap='clickIcon' src='{{item.icon || "https://static.iyunbao.com/website/health/iybApp/iyb_mpvue/policyManage/right_icon_gray.png"}}'></image>
+</label> -->
+
+<!-- 点击返回 -->
+<label bindtap='clickItem' class='form_item' wx:if ="{{item.type === 'click'}}">
+  <text>{{ value || item.placeholder }}</text>
+  <image class='icon icon_right' src='{{item.icon || "https://static.iyunbao.com/website/health/iybApp/iyb_mpvue/icon/icon_right1.png"}}'></image>
+</label>
+
+<!-- 自定义 -->
+<view class='form_item' wx:if="{{item.type === 'slot'}}">
+  <slot></slot>
+</view>
+

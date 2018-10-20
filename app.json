@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/questionHome/questionHome",
+    "pages/shopHome/shopHome",
+    "pages/demo/demo",
+    "pages/exam/exam"
+  ],
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5D77FF",
+    "navigationBarTitleText": "超本学院",
+    "navigationBarTextStyle": "#fff"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

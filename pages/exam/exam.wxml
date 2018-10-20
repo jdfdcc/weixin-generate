@@ -1,0 +1,66 @@
+<view class='progress' >
+  <view wx:if="{{questionsList.length > 0}}" class='progress_item' style='width: {{((quesIndex + 1) / questionsList.length) * 100 + "vw"}}'></view>
+</view>
+<view class='content'>
+  <view class='title'>
+    <text class='q_type'>{{question.type === 0 ? '单选' : '多选'}}</text>
+    {{question.title}}
+  </view>
+
+  <!-- 答题内容 -->
+  <view class='exam_content'>
+    <radio-group wx:if="{{question.type===0}}"  class="radio-group" bindchange="checkboxChange" >
+      <label class="radio a_item" wx:for="{{question.options}}" wx:key="{{index}}">
+        <radio  class='radio_item' 
+                color="rgb(50, 140, 255)" 
+                value="{{item.name}}" 
+                checked="{{item.checked}}"
+                disabled="{{answerStatus === 2}}" 
+                />
+        {{item.name}}.{{item.value}}
+      </label>
+    </radio-group>
+
+    <checkbox-group wx:else bindchange="checkboxChange">
+      <label class="checkbox a_item" wx:for="{{question.options}}" wx:key="{{index}}">
+        <checkbox value="{{item.name}}" 
+                  checked="{{item.checked}}"
+                  disabled="{{answerStatus === 2}}" 
+                  />
+        {{item.name}}.{{item.value}}
+      </label>
+    </checkbox-group>
+  </view>
+
+  <!-- 下一次 -->
+  <button wx:if="{{answerStatus === 2}}" bindtap='nextQuestion' class='btn_opt btn_active'>
+    下一题
+  </button>
+
+  <button wx:else bindtap='submitAnswer' class='btn_opt btn_active {{answerStatus == 0 ? "btn_disabled" : ""}}'>
+    提交
+  </button>
+  
+
+  <!-- 答案区域 -->
+
+  <view class='answer_area' wx:if="{{answer.length > 0 && answerStatus == 2}}">
+    <view class='header'>
+      <view class='left'>
+        <view wx:if="{{isRight}}">
+          <icon type="success" size="25" />
+        </view>
+        <view wx:else>
+          <icon type="cancel" size="25" color='red' />
+        </view>
+      </view>
+      <text>正确答案：{{question.rightAnswer}}</text>
+    </view>
+
+    <view class='an_header'>解析:</view>
+    <view class='text'>
+    {{question.explain}}
+    </view>
+  </view>
+
+</view>

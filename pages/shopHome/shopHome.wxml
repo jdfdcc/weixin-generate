@@ -1,0 +1,18 @@
+<view class='page_shop_home'>
+  <view class='shop_item' wx:for="{{shopList}}" wx:key="{{index}}">
+    <view class='item_header'>
+      <text>{{item.g_classType}}</text>
+      <text>{{item.g_name}}</text>
+    </view>
+
+    <view class='item_bottom'>
+      <view >
+        <!-- <image></image> -->
+      </view>
+      <view class='right'>
+        <text>最低￥{{item.g_money}}起</text>
+        <text class='end'>{{item.g_buycount}}人已购买</text>
+      </view>
+    </view>
+  </view>
+</view>

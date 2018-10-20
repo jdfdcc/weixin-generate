@@ -1,0 +1,35 @@
+.page_home{
+  background-image: url('http://wap.chaobenxueyuan.com/images/bg10.png');
+  background-size: 100% auto;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.page_ques_header{
+  /* background: rgb(50, 140, 255); */
+  width: 100vw;
+  min-height: 200rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFF;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 35rpx;
+}
+
+.main_home{
+  padding: 50vh 40rpx 0 40rpx;
+  box-sizing: border-box;
+}
+
+.main_home button{
+  margin-top: 40rpx;
+}
+
+.btn_exam{
+  height: 120rpx;
+  line-height: 120rpx;
+  background-color: #fff;
+  box-shadow: 0px 2px 3px rgba(1, 1, 1, .5);
+}

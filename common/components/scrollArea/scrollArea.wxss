@@ -1,0 +1,39 @@
+.scorll_area{
+  height: 300rpx;
+  width: 100vw;
+  pointer-events:none;
+  position: absolute;
+}
+
+.scoll_item{
+  max-width: 250rpx;
+  min-width: 250rpx;
+  display: flex;
+  align-items: center;
+  height: 45rpx;
+  background: rgba(222, 229, 251, .8);
+  border-radius: 20rpx;
+  margin-top: 20px;
+  font-size: 24rpx;
+  color: rgb(144,76,42);
+  opacity: 0;
+  position: absolute;
+}
+.scoll_item image{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin: 0 8rpx;
+  
+}
+
+@keyframes _to_left {
+  from {
+    opacity: 1;
+    transform: translateX(100vw)
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-220rpx)
+  }
+}

@@ -1,0 +1,85 @@
+.progress{
+  height: 10rpx;
+  width: 100vw;
+  background: #fff;
+}
+.progress_item{
+  height: 10rpx;
+  background: rgb(50, 140, 255);
+}
+.content{
+  box-sizing: border-box;
+  background: rgb(247, 247, 247);
+  min-height: 100vh;
+}
+
+.title{
+  font-size: 35rpx;
+  padding: 30rpx;
+  color: gray;
+}
+
+.q_type{
+  color: white;
+  padding: 6rpx 10rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  background-color: rgb(50, 140, 255);
+}
+
+.exam_content{
+  background: #fff;
+  padding: 0rpx 20rpx;
+}
+
+.a_item{
+  display: block;
+  min-height: 90rpx;
+  padding-top: 20rpx;
+}
+
+.btn_opt{
+  color:white;
+  height: 110rpx;
+  bottom: 50rpx;
+  left: 12.5vw;
+  width: 75vw;
+  position: fixed;
+  border-radius: 50rpx;
+  line-height: 110rpx;
+  background-color: rgb(50, 140, 255);
+}
+
+.btn_disabled{
+  color: gray;
+  background-color: rgb(201, 204, 211);
+}
+
+.answer_area{
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.answer_area .header{
+  height: 120rpx;
+  line-height: 120rpx;
+  padding:  0rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(201, 204, 211);
+}
+.header .left{
+  color: rgb(198, 84, 44);
+  font-size: 36rpx;
+  padding-top: 10rpx;
+}
+
+.text{
+  min-height: 500rpx;
+  color: rgb(43, 43, 43);
+  padding: 0rpx 30rpx;
+  font-size: 32rpx;
+}
+.an_header{
+  color: gray;
+  padding: 20rpx 30rpx;
+}

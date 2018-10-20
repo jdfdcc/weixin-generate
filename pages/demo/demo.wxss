@@ -1,0 +1,7 @@
+/* @import '../../assets/wxss/animation.wxss'; */
+.yzm_ipt{
+  display: flex;
+  align-items: center;
+  margin: 20rpx 20rpx;
+  border: 1px solid black;
+}

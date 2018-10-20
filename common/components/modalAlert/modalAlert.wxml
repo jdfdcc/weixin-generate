@@ -1,0 +1,5 @@
+<view class='modal' wx:if="{{show }}" bindtap='clickModal'>
+ <view catchtap='closeModal' class='animated {{animation}} {{position }}'>
+    <slot />
+ </view>
+</view>

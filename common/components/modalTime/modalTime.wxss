@@ -1,0 +1,71 @@
+.com_model_time{
+  /* font-family: "PingFangSC-Medium"; */
+  width: 540rpx;
+  height: 640rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 10rpx;
+  top: 18rpx;
+  font-size: 30rpx;
+  width: 48rpx;
+  height: 48rpx;
+  color: #ffffff;
+  line-height: 20rpx;
+  border-radius: 50rpx;
+}
+.com_model_time .title{
+  font-size: 36rpx;
+  color: #333333;
+  text-align: center;
+  width: 540rpx;
+  padding-top: 50rpx;
+}
+.com_model_time .btn_area{
+  display: flex;
+  justify-content: center;
+  height: 58rpx;
+  margin: 19rpx 0;
+  padding: 0 31rpx;
+}
+.btn_area button {
+  width: 220rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 30rpx;
+  border-radius: 100rpx;
+  border: 1rpx solid #00AFF9;
+  color: #00AFF9;
+  box-sizing: border-box;
+  background-image: #fff;
+  background: #fff;
+  transition: background .3s linear, border .3 linear;
+}
+.btn_area .active{
+  color: #ffffff;
+  border: 0px;
+  background: linear-gradient(-135deg, #00AFF9 0%, #057AFF 100%);
+}
+.com_model_time .btn_ok{
+  position: absolute;
+  bottom: 0px;
+  height: 102rpx;
+  line-height: 102rpx;
+  font-size: 30rpx;
+  color: #057AFF;
+  width: 100%;
+  background-color: transparent;
+}
+.text-page {
+  padding-top: 4rpx;
+  overflow: hidden;
+}
+.text-page .scorll_item{
+  line-height: 35px;
+  text-align:center;
+  font-weight: 350
+}

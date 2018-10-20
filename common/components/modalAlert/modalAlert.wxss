@@ -1,0 +1,49 @@
+@import '../../../assets/wxss/animation.wxss';
+.modal{
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(1,1,1,.5);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scaleIn {
+  animation: scale_in .5s;
+}
+
+.animated.bottom{
+  position: absolute;
+  bottom: 0px;
+}
+.animated.top{
+  position: absolute;
+  top: 0px;
+}
+.animated.left{
+  position: absolute;
+  left: 0px;
+}
+.animated.right{
+  position: absolute;
+  right: 0px;
+}
+
+@keyframes scale_in{
+  0% {
+    opacity: 1;
+    transform: scale(0);
+    
+  }
+  50% {
+    opacity: .8;
+    transform: scale(1.2)
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+}

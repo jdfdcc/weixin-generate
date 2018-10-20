@@ -1,0 +1,6 @@
+<view class='page_home'>
+  <!-- <button bindgetphonenumber="bindgetphonenumber" class='btn_login no_border' open-type='getPhoneNumber'>
+    自动登录
+  </button> -->
+  <button bindtap='bindgetphonenumber' class='btn_login no_border'>立即体验</button>
+</view>

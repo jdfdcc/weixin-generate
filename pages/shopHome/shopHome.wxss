@@ -1,0 +1,33 @@
+.page_shop_home{
+  height: 100vh;
+  background: rgb(247, 247, 247);
+}
+.shop_item{
+  min-height: 100px;
+  margin-top: 10px;
+  box-shadow: 1px 0px 5px #e0e0e0;
+  background: #ffffff;
+  padding: 1px 10px 2px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item_bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.item_bottom .right {
+ font-size: 30rpx;
+  flex: 0 0 200rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+.right :first-child{
+  color: rgb(252, 93, 8);
+}
+.right .end{
+  color: gray;
+}
+
