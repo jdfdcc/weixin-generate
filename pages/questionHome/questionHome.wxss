@@ -1,35 +1,130 @@
-.page_home{
-  background-image: url('http://wap.chaobenxueyuan.com/images/bg10.png');
-  background-size: 100% auto;
-  min-height: 100vh;
+.main_header {
+  height: 510rpx;
+  background-image: url('http://wap.chaobenxueyuan.com/images/home/bg.png');
+  background-size: contain;
   background-repeat: no-repeat;
 }
+.main_header .top  {
+  display: flex;
+  height: 214rpx;
+  align-items: center;
+}
+.top image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0rpx 33rpx 0rpx 19rpx;
+}
+.top .right {
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+  height: 140rpx;
+  justify-content: center;
+  flex: 1;
+  margin-top: 0rpx;
+}
 
-.page_ques_header{
-  /* background: rgb(50, 140, 255); */
-  width: 100vw;
-  min-height: 200rpx;
+.right .waring{
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.waring text{
+  font-size: 40rpx;
+  color: #ff0000;
+}
+.kemu text{
+  color: #ff0000;
+}
+.main_header .center {
+  height: 92rpx;
   display: flex;
   justify-content: space-between;
+  padding:  0 42rpx;
   align-items: center;
-  color: #FFF;
-  padding: 20rpx;
+}
+.center .left{
+  font-size: 22rpx;
+}
+.center .left text{
+  font-size: 30rpx;
+  color: #ff0000;
+}
+.center .right{
+  font-size: 30rpx;
+  margin-right: 0rpx;
+  background: transparent;
+}
+.center .right image{
+  height: 20rpx;
+  width: 26rpx;
+}
+
+.main_header .end{
+  height: 200rpx;
+  background: #fff;
+  width: 96vw;
+  margin-left: 2vw;
+  border-radius: 10rpx;
+  box-shadow: 1px 1px 10rpx rgba(1, 1, 1, .1);
+  display: flex;
+  justify-content: space-around;
+}
+.end_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20rpx;
+  flex: 1;
+}
+.end_item text:first-child{
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+.end_item .number{
+  font-size: 50rpx!important;
+  font-weight: 800;
+}
+
+.page_content {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  /* padding: 2vw; */
+}
+
+.content_item {
+  height: 220rpx;
+  margin-left: 2vw;
+  width: 47vw;
+  background: #fff;
+  box-shadow: 0px 0px 6rpx rgba(1, 1, 1, .1);
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20rpx;
   box-sizing: border-box;
-  font-size: 35rpx;
+  border-radius: 10rpx;
 }
-
-.main_home{
-  padding: 50vh 40rpx 0 40rpx;
-  box-sizing: border-box;
+.content_item .item_info{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-
-.main_home button{
-  margin-top: 40rpx;
+.item_info .title{
+  font-size: 30rpx;
 }
-
-.btn_exam{
-  height: 120rpx;
-  line-height: 120rpx;
-  background-color: #fff;
-  box-shadow: 0px 2px 3px rgba(1, 1, 1, .5);
+.item_info .content{
+  font-size: 20rpx;
+  color: #666;
+}
+.content_item image{
+  min-height: 90rpx;
+  height: 90rpx;
+  width: 90rpx;
+  background: rgba(1, 1, 1, .1);
+  border-radius: 50%;
+  margin: 10rpx;
 }

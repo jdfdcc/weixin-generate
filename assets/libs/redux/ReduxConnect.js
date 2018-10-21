@@ -31,7 +31,7 @@ const _updateData = function (keys, _stateUpdated, from = "init") {
 /**
  * 连接器
  */
-const REDUX = function (pageObj, keys = ['policyState']) {
+const REDUX = function (pageObj, keys = ['base']) {
 
   let _ready, _detached, _stateUpdated
   _ready = pageObj.ready || pageObj.onReady

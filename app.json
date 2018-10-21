@@ -4,14 +4,32 @@
     "pages/questionHome/questionHome",
     "pages/shopHome/shopHome",
     "pages/demo/demo",
-    "pages/exam/exam"
+    "pages/exam/exam",
+    "pages/account/account"
   ],
-  
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#5D77FF",
+    "navigationBarBackgroundColor": "#F9D649",
     "navigationBarTitleText": "超本学院",
     "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#ff5000",
+    "list": [
+      {
+        "iconPath": "./assets/images/tab/question.png",
+        "selectedIconPath": "./assets/images/tab/question_active.png",
+        "pagePath": "pages/questionHome/questionHome",
+        "text": "刷题"
+      },
+      {
+        "iconPath": "./assets/images/tab/question_all.png",
+        "selectedIconPath": "./assets/images/tab/question_all_active.png",
+        "pagePath": "pages/shopHome/shopHome",
+        "text": "题库"
+      }
+      
+    ]
   },
   "networkTimeout": {
     "request": 10000,

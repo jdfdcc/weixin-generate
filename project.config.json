@@ -42,13 +42,13 @@
 				{
 					"id": 0,
 					"name": "调试专用",
-					"pathName": "pages/exam/exam",
+					"pathName": "pages/questionHome/questionHome",
 					"query": "policyId=88B932000029810413&policyStatus=2"
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "调试专用",
-					"pathName": "pages/questionHome/questionHome",
+					"pathName": "pages/shopHome/shopHome",
 					"query": "policyId=88B932000029810413&policyStatus=2"
 				}
 			]

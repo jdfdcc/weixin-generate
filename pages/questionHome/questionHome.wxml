@@ -1,10 +1,64 @@
-<view class='page_home'>
-  <view class='main_home'>
-    <!-- <button>智能练习</button>
-    <button>全真模拟</button>
-    <button>章节练习</button>
-    <button>我的错题</button> -->
+<view class='page_home page_gray'>
+  <view class='main_header'>
+    <view class='top'>
+      <image src='{{headerImage}}'></image>
+      <view class='right'>
+        <view class='waring'>
+          距离考试 <text>392</text> 天
+        </view>
+        <view class='kemu'>
+        当前题库: <text>英语单选综合训练10000题目</text>
+        </view>
+      </view>
+    </view>
+    <view class='center'>
+      <view class='left'>
+        <text>23542</text>位同学正在刷题
+      </view>
+      <button bindtap='toItem' class='right no_border btn'>
+        选择题库
+        <image src='http://wap.chaobenxueyuan.com/images/home/down.png'></image>
+      </button>
+    </view>
 
-    <button class='btn_exam btn' bindtap='toExam'>今日练习</button>
+    <view class='end'>
+      <view class='end_item'>
+        <text>学习天数</text>
+        <text><text class='number'>165</text>天</text>
+      </view>
+
+      <view class='end_item'>
+        <text>已经题量</text>
+        <text><text class='number'>165</text>/2222</text>
+      </view>
+
+      <view class='end_item'>
+        <text>正确率</text>
+        <text><text class='number'>20</text> %</text>
+      </view>
+    </view>
+
   </view>
+
+  <view class='page_content'>
+    <view wx:for="{{itemList}}"
+          wx:key="{{index}}"
+          data-item="{{item}}"
+          bindtap='toItem'
+          class='content_item'>
+      <image src='http://wap.chaobenxueyuan.com/images/home/{{item.src}}'></image>
+      <view class='item_info'>
+        <text class='title'>{{item.title}}</text>
+        <text class='content'>{{item.context}}</text>
+      </view>
+    </view>
+  </view>
+
 </view>
+
+
+
+
+
+
+    <!-- <button class='btn_exam btn' bindtap='toExam'>今日练习</button> -->

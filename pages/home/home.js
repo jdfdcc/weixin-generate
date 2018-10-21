@@ -21,7 +21,7 @@ Page({
   },
   
   bindgetphonenumber: function (res) {
-    wx.redirectTo({
+    wx.switchTab({
       url: '/pages/questionHome/questionHome',
     })
   }
