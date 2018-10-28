@@ -14,10 +14,15 @@ export default function (state = baseState, action) {
       break;
     case constants.USER_INFO: 
       state.base.user = action.userInfo
-      state.base.openId = action.userInfo.openId
       break;
     case constants.HAS_AUTH:
       state.base.hasAuth = action.hasAuth
+      break;
+    case constants.OPENID:
+      state.base.openId = action.openId
+      break;
+    case constants.TOKEN:
+      state.base.token = action.token
       break;
     default:
       break;

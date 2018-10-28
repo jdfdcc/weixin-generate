@@ -1,35 +1,6 @@
-<view class="page_gray">
-  <scroll-view
-    scroll-x
-    style="width: 100%"
-    class='scroll_area'>
-    <view
-      wx:for="{{courseList}}"
-      wx:key="{{index}}"
-      class='scroll_item'
-      >
-      <text class='{{index === 1 ? "item_choose" : ""}}'>{{item}}</text>
-      </view>
-  </scroll-view>
-
-  <!-- 商品列表 -->
-  <view class='shop_area'>
-    <view class='shop_item' wx:for="{{shopList}}" wx:key="{{index}}">
-      <view class='left'>
-        <image src='http://wap.chaobenxueyuan.com/images/shop/book.png'></image>
-      </view>
-
-      <view class='center'>
-        <view class='name'>四级真题单选2000题</view>
-        <view class='context'>内含5年四级真题 有解析，建议最少刷2遍</view>
-        <view class='count'>共计 2652 道题</view>
-      </view>
-
-      <view class='right'>
-        <text class='price'>¥79.9</text>
-        <text>897人刷</text>
-      </view>
-
-    </view>
-  </view>
+<view class='page_gray'>
+  <shopList
+    subjects="{{subjects}}"
+    shopList="{{shopList}}"
+    />
 </view>

@@ -9,9 +9,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F9D649",
+    "navigationBarBackgroundColor": "#FFE11C",
     "navigationBarTitleText": "超本学院",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "selectedColor": "#ff5000",

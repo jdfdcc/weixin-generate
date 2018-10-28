@@ -1,4 +1,7 @@
 {
   "navigationBarBackgroundColor": "#fff",
-  "navigationBarTextStyle":"black"
+  "navigationBarTextStyle":"black",
+  "usingComponents": {
+    "authButton": "./../../common/components/authButton/authButton"
+  }
 }

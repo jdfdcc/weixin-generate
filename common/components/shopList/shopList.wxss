@@ -7,14 +7,16 @@
   white-space: nowrap;
   line-height: 90rpx;
   font-size: 30rpx;
-  color: #9f9f9f;
   position: fixed;
 }
 .scroll_area .scroll_item{
   min-width: 18vw;
   display: inline-block;
   height: 88rpx;
+  color: #9f9f9f;
   text-align: center;
+  border-bottom: none;
+  transition: all .1s linear;
 }
 
 .scroll_item text{
@@ -90,4 +92,11 @@
 .shop_item .price{
   font-size: 30rpx;
   color: #ff7400;
+  display: flex;
+  align-items: flex-end;
+}
+.shop_item .price::after{
+  content: '起';
+  margin-left: 4rpx;
+  font-size: 24rpx;
 }

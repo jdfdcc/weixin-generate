@@ -2,6 +2,7 @@
  * @name 调用后台获取用户数据
  */
 import API from './../api/api.js';
+import store from '../redux/index.js';
 import APP from './api.js'
 import util from './util.js';
 import { deepCopy} from './tools.js';
@@ -69,12 +70,16 @@ const http = function (key, data, urlData, loadText = '加载中') {
 
       success: function (res) {
         console.log('返回数据', res)
-        if (+res.data.status === 0) {
-          resolve(res.data)
+        const data = res.data;
+        if (+data.status === 0) {
+          if (typeof data.data === 'string') {
+            data.data = JSON.parse(data.data)
+          }
+          resolve(data)
           // 当后台返回用户未注册并且当前接口设置为自动处理未注册信息的时候执行
         } else {
           // 自动提示
-          apiConfig.autoToast && util.toast(data.message || data.errorMsg)
+          apiConfig.autoToast && util.toast(data.msgs || '服务器异常')
           reject(res)
         }
       },
@@ -87,7 +92,6 @@ const http = function (key, data, urlData, loadText = '加载中') {
       // 接口调用结束的回调函数（调用成功、失败都会执行）
       complete: function () {
         apiConfig.loading && httpList.pop()
-
         // 设置延时关闭加载框 防止多次连续调用导致加载框闪动
         setTimeout(e => {
           if (httpList.length === 0 && apiConfig.loading) {
@@ -102,9 +106,11 @@ const http = function (key, data, urlData, loadText = '加载中') {
     }
     // 获取登陆code传入到后台
     APP.getCode().then(code => {
-      opt.header["code"] = code
-      opt.header['Access-Control-Max-Age'] = '86400'
-      opt.header['resource'] = 'orderLite'
+      opt.header["code"] = code;
+      opt.header['Access-Control-Max-Age'] = '86400';
+      opt.header['resource'] = 'orderLite';
+      const token = store.getState().base.token;
+      opt.url += `&code=${code}&token=${token}`;
       let requestTask = wx.request(opt)
     })
   })

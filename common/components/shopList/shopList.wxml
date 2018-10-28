@@ -1,0 +1,40 @@
+<view class="page_gray">
+  <view style='height:90rpx;'>
+    <scroll-view
+      scroll-x
+      style="width: 100%"
+      class='scroll_area'>
+      <view
+        wx:for="{{subjects}}"
+        wx:key="{{index}}"
+        class='scroll_item'
+        bindtap='chooseSubJect'
+        data-item='{{item}}'
+        >
+        <text class='{{item.id === chooseId ? "item_choose" : ""}}'>{{item.title}}       </text>
+      </view>
+  </scroll-view>
+  </view>
+  <!-- 商品列表 -->
+  <view class='shop_area'>
+    <view class='shop_item' wx:for="{{shopList}}" wx:key="{{index}}">
+      <view class='left'>
+        <image src='{{item.src}}' />
+      </view>
+
+      <view class='center'>
+        <view class='name'>{{item.title}}</view>
+        <view class='context'>{{item.content}}</view>
+        <view class='count'>共计 {{item.count}} 道题</view>
+      </view>
+
+      <view class='right'>
+        <text class='price'>
+          ¥{{item.price}}
+        </text>
+        <text>{{item.beashCount}}人刷</text>
+      </view>
+
+    </view>
+  </view>
+</view>

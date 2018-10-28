@@ -4,6 +4,7 @@
 const base = {
   code: '',
   openId: '',
+  token: '',
   user: {},      // 用户基本信息
   hasAuth: false // 是否授权
 }

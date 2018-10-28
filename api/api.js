@@ -23,6 +23,7 @@ const config = function (url, method = 'POST', loading = true, autoToast = true,
 
 // 配置接口调用方式
 export default {
-  getObjectList: config(`${http.LITE}?c=apiSubject&a=subjects`, 'GET', false, false, false,),
+  getObjectList: config(`${http.LITE}?c=apiSubject&a=subjects&`, 'GET', false, false, false,),
+  login: config(`${http.LITE}?c=apiuser&a=wxlogin&`, 'GET')
 }
 export const httpObj = http

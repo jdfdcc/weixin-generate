@@ -36,14 +36,12 @@ Component(ReduxConnect({
       if (res.detail.errMsg === 'getUserInfo:ok') {
         updateAuth(true)
         this.triggerEvent('success')
-
         // 默认更新用户头像和昵称
         let userInfo = res.detail.userInfo
         let req = {
           headImage: userInfo.avatarUrl ,
           nickName: userInfo.nickName
         }
-        http('updateAuthorize', req)
       }
     }
   },
