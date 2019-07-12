@@ -1,0 +1,17 @@
+<view class="page_pay_status">
+  <image mode='widthFix' wx:if="{{status == 1}}" src="http://m.chaobenxueyuan.com/Static/images/pay/success.png"></image>
+  <image wx:else mode='widthFix' src="http://m.chaobenxueyuan.com/Static/images/pay/fail.png"></image>
+
+
+  <view wx:if="{{status == 1}}"  class='success content'>
+    <text class='icon' >支付成功</text>
+    <text>恭喜 你离梦想又近了一步</text>
+  </view>
+  <view wx:else class='fail content'>
+    <text class='icon'>支付失败</text>
+    <text>哎呀 出错了 重新再试试吧</text>
+  </view>
+
+  <button wx:if="{{status == 1}}" bindtap='toHome' class='btn_end btn no_border'>完成</button>
+
+</view>

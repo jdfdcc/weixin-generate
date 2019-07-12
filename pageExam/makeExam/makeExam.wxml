@@ -1,0 +1,81 @@
+<view class='page_gray'>
+  <view class="page_title ">
+    <text class='font_bold'>{{question.type == 0 ? '单选题' : '多选题'}}</text>
+    <text class='end'>
+      <text style='color:rgb(78,115,255)'>{{quesIndex + 1}}</text>/{{questionsList.length}}
+    </text>
+  </view>
+
+  <view class='page_content'>
+
+    <view class='qustion_title'>{{question.content}}</view>
+
+    <view class='question_answer'>
+      <label
+        bindtap='toAnswer'
+        data-item='{{item}}'
+        data-index='{{index}}'
+        wx:for="{{question.options}}"
+        wx:key="{{index}}"
+        class='answer_item {{item.choose ? "choose" : ""}}'>
+        <view class='answer_title font_bold {{question.type == 0 ? "radio" : ""}}'>
+          {{item.value}}
+        </view>
+        <view class='answer_value'>
+          {{item.title}}
+        </view>
+      </label>
+    </view>
+  </view>
+
+  <view style='height:20rpx;background:#F3F4F6'></view>
+
+  <view wx:if="{{optiontype == 3}}" class='page_explain'>
+    <view class='answer_result'>
+      <view wx:if="{{question.isRight}}" class='right'>
+        <icon class='icon' type="success" size="22" />本题答对
+      </view>
+      <view wx:else class='error'>
+        <icon class='icon' type="cancel" size="22" />本题答错
+      </view>
+      <text class='font_bold'>正确答案: <text class='right_'>{{question.rightAnswer}}</text>
+      </text>
+    </view>
+
+    <view class='answer_explain'>
+      <view class='title'>
+        解析
+      </view>
+
+      <view class='explain'>
+        {{question.explain}}
+      </view>
+    </view>
+  </view>
+
+  <view style='height:300rpx'></view>
+
+  <view class='btn_area'>
+
+    <button bindtap="back" wx:if="{{quesIndex + 1 === questionsList.length && optiontype === 3}}" class='no_border btn'>
+      返回
+    </button>
+    <button
+      wx:elif="{{optiontype !== 0}}"
+      bindtap='submit'
+      class='no_border btn'
+      disabled="{{optiontype == 0}}">
+      {{optiontype == 1 ? "提交" : "下一题"}}
+    </button>
+
+    
+  </view>
+
+  <!-- <view
+    wx:elif="{{quesIndex + 1 === questionsList.length && optiontype === 3}}"
+    class='btn_area'>
+    
+  </view> -->
+
+</view>
+

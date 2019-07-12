@@ -1,0 +1,37 @@
+<view class='page_gray'>
+
+  <view class='header'>
+    <image src='{{formObj.weChatPortrait || defaultImage}}'></image>
+    <text class='name_lang' style='text-align: center;'>{{formObj.customerName}}</text>
+  </view>
+
+  <view class='card_area'>
+    <view class='card' wx:for="{{formList}}" wx:key="{{index}}">
+      <view wx:if="{{item.type === 'cut'}}" class='cut_line'>
+      </view>
+      <view class='card_item {{item.class}}' wx:elif="{{!item.hide}}">
+        <text class='title'>{{item.lable}}</text>
+        <ui-form-item formId="updateCustomer" wx:if="{{item.type !== 'self'}}" class="right" item="{{item}}" value="{{formObj[item.key]}}" bind:change="valueChange" />
+
+        <view wx:elif="{{item.key === 'wx'}}" class='btn_follow' bindtap='followWechat'>
+          <button wx:if="{{!formObj.authorizeId}}" class='no_border btn_active'>关联微信</button>
+          <button wx:else class='no_border btn_active'>{{formObj.weChatNickname}}</button>
+          <image src='https://static.iyunbao.com/website/health/iybApp/crm/icon_right.png'></image>
+        </view>
+
+        <!-- 地址 -->
+        <label wx:elif="{{item.key === 'address'}}" class='btn_follow'>
+          <picker mode="region" bindchange="bindRegionChange" value="{{['广东省', '广州市', '海珠区']}}" style='flex:1' bindchange="bindRegionChange">
+            <view wx:if="{{formObj['provinceCode']}}" class="picker_address active_address">
+              {{formObj['provinceCode']}}{{formObj['cityCode']}}{{formObj['areaCode']}}
+            </view>
+            <view wx:else class='picker_address'>
+              请选择
+            </view>
+          </picker>
+          <image src='https://static.iyunbao.com/website/health/iybApp/crm/icon_right.png'></image>
+        </label>
+      </view>
+    </view>
+  </view>
+</view>

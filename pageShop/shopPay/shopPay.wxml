@@ -1,0 +1,51 @@
+<view class="ui_header_info">
+  <image src='{{user.avatarUrl}}'></image>
+  <text>{{user.nickName}}</text>
+</view>
+
+<view class='ui_choose_header'>
+  <text>选择会员套餐</text>
+  <view class='right'>
+    <text>使用兑换码</text>
+    <image src='http://wap.chaobenxueyuan.com/images/icon/aui-icon-right.svg'></image>
+  </view>
+</view>
+
+<scroll-view
+  scroll-x
+  style="width: 100%"
+  class='ui_scroll_content'>
+  <view
+    wx:for="{{chooseList}}"
+    wx:key="{{index}}"
+    data-item='{{item}}'
+    bindtap='chooseItem'
+    class='scroll_item {{chooseItem.g_id === item.g_id ? "item_choosed" : ""}}'>
+    <image wx:if="{{chooseItem.g_id === item.g_id}}" src='http://wap.chaobenxueyuan.com/images/icon/check.svg' />
+    <image wx:else src='http://wap.chaobenxueyuan.com/images/icon/uncheck.svg' />
+    <text>{{item.g_time}}</text>
+    <text>￥{{item.g_fee}}</text>
+  </view>
+</scroll-view>
+
+
+<view class='ui_pay_info'>
+  <view>
+    需支付：{{chooseItem.g_fee}} 元
+  </view>
+
+  <view class='ui_pay_waring'>
+    <image class='wechart' src='http://wap.chaobenxueyuan.com/images/icon/wechart.svg'></image>
+    <view class='center'>
+      <text>微信支付</text>
+      <text class='end'>亿万用户的选择，更快更安全</text>
+    </view>
+    <image class='icon' src='http://wap.chaobenxueyuan.com/images/icon/check.svg'></image>
+  </view>
+</view>
+
+
+<button
+  disabled='{{!chooseItem.g_id}}'
+  bindtap='toPay'
+  class='btn_pay no_border btn'>立即支付</button>

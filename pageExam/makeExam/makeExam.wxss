@@ -1,0 +1,144 @@
+.page_title {
+  height: 130rpx;
+  box-shadow: 0px 0rpx 3rpx #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+  color: rgb(30, 30, 30);
+  font-size: 45rpx;
+  background: #fff;
+  margin-bottom: 1rpx;
+}
+.page_title .end {
+  color: rgb(170, 170, 170);
+  font-size: 30rpx;
+}
+.page_content {
+  padding: 30rpx;
+  background: #fff;
+}
+
+.qustion_title {
+  padding-bottom: 30rpx;
+  font-size: 40rpx;
+}
+
+.answer_item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 45rpx;
+  font-size: 35rpx;
+  vertical-align: middle;
+}
+
+.question_answer {
+  margin-top: 20rpx;
+}
+
+.answer_value {
+  margin-left: 30rpx;
+  min-height: 70rpx;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.answer_item .answer_title {
+  height: 70rpx;
+  width: 70rpx;
+  flex: 0 0 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  background: rgb(239, 241, 255);
+  border-radius: 10rpx;
+  display: block;
+  /* transition: background linear .2s; */
+}
+
+.choose .answer_title {
+  background: #FFE11C;
+}
+
+
+.page_explain{
+  padding: 0 30rpx 30rpx 30rpx;
+  background: #fff;
+  font-size: 30rpx;
+}
+
+.answer_result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  height: 120rpx;
+}
+
+.answer_result .right_ {
+  color: rgb(108, 201, 109);
+  font-size: 40rpx;
+}
+.answer_result .right {
+  color: rgb(108, 201, 109);
+}
+
+.answer_result .error {
+  color: red;
+}
+
+.answer_result .icon {
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.answer_explain {
+  padding-top: 30rpx;
+  padding-left: 60rpx;
+  font-size: 30rpx;
+}
+.answer_explain .title {
+  font-size: 35rpx;
+  color: rgb(99, 99, 99);
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.answer_explain .title::before {
+  content: '';
+  position: absolute;
+  height: 15rpx;
+  width: 15rpx;
+  background: red;
+  border-radius: 50%;
+  top: 20rpx;
+  left: -50rpx;
+}
+
+.answer_explain .explain {
+  line-height: 50rpx;
+  word-break: break-all;
+}
+
+.btn_area {
+  height: 150rpx;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+.btn_area button{
+  color:white;
+  height: 110rpx;
+  bottom: 50rpx;
+  left: 12.5vw;
+  width: 75vw;
+  position: fixed;
+  border-radius: 50rpx;
+  line-height: 110rpx;
+  background-color: rgb(50, 140, 255);
+}
+
+.answer_item .radio {
+  border-radius: 50%;
+}

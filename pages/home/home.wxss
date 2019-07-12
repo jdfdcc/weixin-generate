@@ -2,7 +2,7 @@
   min-height: 100vh;
   padding-top: 30vh;
   box-sizing: border-box;
-  background: url('http://wap.chaobenxueyuan.com/images/home.png');
+  background: url('http://wap.chaobenxueyuan.com/images/home.png?version=0.1');
   background-position-y: -100rpx;
   background-repeat: no-repeat;
   background-size: 100% auto;

@@ -21,7 +21,15 @@
   background: white;
 }
 .form_item .icon_right{
-  width: 20rpx;
-  height: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
   margin-right: 30rpx;
+}
+
+.error_info{
+  color: red;
+  font-size: 22rpx;
+  position: absolute;
+  margin-top: -10rpx;
+  pointer-events: none;
 }

@@ -24,6 +24,20 @@ export default function (state = baseState, action) {
     case constants.TOKEN:
       state.base.token = action.token
       break;
+    case constants.VALIDATE_INFO:      // 更新用户详情
+      const { key, validate } = action.validateInfo;
+      const tempObj = state.base.validate[key] || {};
+      const tempValidateObj = { ...tempObj, ...validate }
+      for (const indexKey in tempValidateObj) {
+        const tempItem = tempValidateObj[indexKey];
+        if (!tempItem.isPass) {
+          tempObj['allPass'] = false;
+          break;
+        }
+        tempObj['allPass'] = true;
+      }
+      state.base.validate[key] = tempValidateObj;
+      break;
     default:
       break;
   }

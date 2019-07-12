@@ -1,4 +1,4 @@
-<modalTime  value="{{value}}" show="{{show}}" bind:ok="choose">
+<!-- <modalTime  value="{{value}}" show="{{show}}" bind:ok="choose">
 </modalTime>
 <formPage>
   弹出层: modalAlert
@@ -25,4 +25,7 @@
 
 
 
-<canvas canvas-id="myCanvas" style="position:fixed;opacity:0; width: 750px; height: 1344px;"/>
+<canvas canvas-id="myCanvas" style="position:fixed;opacity:0; width: 750px; height: 1344px;"/> -->
+
+
+<button bindtap='pay'>支付</button>

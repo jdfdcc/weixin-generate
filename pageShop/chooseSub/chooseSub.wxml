@@ -1,0 +1,16 @@
+<view wx:if="{{shopList.length > 0}}" class='page_gray'>
+  <shopList
+    subjects="{{subjects}}"
+    shopList="{{shopList}}"
+    bind:choose="chooseCourse"
+    bind:chooseType="chooseType"
+    />
+</view>
+
+<view wx:else class='empty_area'>
+  <image mode='widthFix' src='http://wap.chaobenxueyuan.com/images/icon/empty1.png?version=0.1'></image>
+
+  <text>您还没有题库哟~ 快去选购一个吧！</text>
+  <button bindtap='toBuyQuestion' class='btn'>选购题库</button>
+</view>
+

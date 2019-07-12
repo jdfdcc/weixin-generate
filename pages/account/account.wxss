@@ -1,1 +1,150 @@
-/* pages/account/account.wxss */
+.gongzhonghao{
+  position: fixed;
+  bottom: 100rpx;
+  width: 100vw;
+}
+.page_center{
+  width: 100vw;
+  height: 240rpx;
+  display: flex;
+  align-items: center;
+  padding: 0rpx 30rpx;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.page_center .header_info{
+  display: flex;
+  align-items: center;
+}
+.header_info image{
+  width: 120rpx;
+  max-height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.header_info .info{
+  min-width: 200rpx;
+}
+.header_info .info text{
+  font-family: PingFangSC-Medium;
+  font-size: 34rpx;
+  color: #333333;
+  letter-spacing: 0;
+}
+.info .icon{
+  margin-top: 10rpx;
+  border: 1px solid #FF6E0D;
+  border-radius: 37px;
+  color: #FF6E0D;
+  font-size: 22rpx;
+  line-height: 36rpx;
+  text-align: center;
+  height: 36rpx;
+  max-width: 98rpx;
+}
+.info .icon_green{
+  border: 1px solid #14CC76;
+  color: #14CC76;
+}
+.opt_right{
+  display: flex;
+  align-items: center;
+}
+.opt_right text{
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #999;
+}
+.right_icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 11rpx;
+}
+
+.card_area{
+  width: 100vw;
+  background: #fff;
+}
+.card_area .item {
+  height: 104rpx;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #E0E0E0;
+}
+.card_area .item:last-child{
+  border: none;
+}
+.item .left{
+  display: flex;
+  align-items: center;
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  color: #333333;
+}
+.item .right{
+  display: flex;
+  align-items: center;
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #999999;
+}
+.left image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 20rpx;
+}
+.share_btn{
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+.cantact_area{
+  width: 100vw;
+  height: 240rpx;
+  background-image: url("https://static.iyunbao.com/website/health/iybApp/iyb_mpvue/bg/contact_bg.png");
+  background-size: 100% 100%;
+  line-height: 105rpx;
+  text-align: left;
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: none!important;
+  margin-top: 20rpx;
+}
+/* .cantact_area .right{
+  display: block;
+  border: 3rpx solid #FFFFFF;
+  height: 20rpx;
+  width: 20rpx;
+  transform: rotate(45deg);
+  border-left: 0px;
+  border-bottom: 0px;
+} */
+.first-fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding-bottom: constant(34rpx);
+  background: rgba(0, 0, 0, 0.7);
+  background-size: 100%;
+}
+.image-guide{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

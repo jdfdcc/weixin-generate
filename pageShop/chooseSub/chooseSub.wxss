@@ -1,0 +1,33 @@
+.page_gray{
+  background:rgb(245, 244, 245);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.empty_area image {
+  width: 50vw;
+}
+
+.empty_area {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding-top: 100rpx;
+  flex-direction: column;
+  color: rgb(107, 114, 107);
+  background:rgb(245, 244, 245);
+  min-height: 100vh;
+}
+
+.empty_area text {
+  margin: 60rpx 0;
+}
+
+.empty_area button {
+  background: rgb(40, 116, 255);
+  color: #fff;
+  border-radius: 50rpx;
+  width: 300rpx;
+  height: 100rpx;
+  margin-top: 20vh;
+}

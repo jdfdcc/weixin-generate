@@ -23,6 +23,17 @@ export const updateOpenId = function (openId) {
   store.dispatch({ type: state.OPENID, openId: openId })
 }
 
+/**
+ * 更新验证信息
+ */
+export const updateValidateInfo = function (key, validate) {
+  const validateInfo = {
+    key: key,
+    validate: validate
+  };
+  store.dispatch({ type: state.VALIDATE_INFO, validateInfo })
+}
+
 // 默认
 export default {
   updateCode,
@@ -30,4 +41,5 @@ export default {
   updateAuth,
   updateToken,
   updateOpenId,
+  updateValidateInfo,
 }

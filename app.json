@@ -4,8 +4,29 @@
     "pages/questionHome/questionHome",
     "pages/shopHome/shopHome",
     "pages/demo/demo",
-    "pages/exam/exam",
-    "pages/account/account"
+    "pages/account/account",
+    "pages/func/func",
+    "pages/updateAccount/updateAccount"
+  ],
+  "subPackages": [
+    {
+      "root": "pageExam",
+      "pages": [
+        "exam/exam",
+        "makeExam/makeExam",
+        "chapterList/chapterList"
+      ]
+    },
+    {
+      "root": "pageShop",
+      "pages": [
+        "shopDetail/shopDetail",
+        "chooseSub/chooseSub",
+        "codePay/codePay",
+        "shopPay/shopPay",
+        "payResult/payResult"
+      ]
+    }
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,12 +49,12 @@
         "pagePath": "pages/shopHome/shopHome",
         "text": "题库"
       }
-      
     ]
   },
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": false
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
 }

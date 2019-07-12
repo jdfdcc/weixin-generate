@@ -11,7 +11,7 @@ const http = httpConfig.test
  * @param liading 是否显示加载框
  * @param autoToast 当接口失败的时候是否自动进行数据提示
  */
-const config = function (url, method = 'POST', loading = true, autoToast = true, autoReg = true) {
+const config = function (url, method = 'GET', loading = true, autoToast = true, autoReg = true) {
   return {
     url,
     method,
@@ -24,6 +24,17 @@ const config = function (url, method = 'POST', loading = true, autoToast = true,
 // 配置接口调用方式
 export default {
   getObjectList: config(`${http.LITE}?c=apiSubject&a=subjects&`, 'GET', false, false, false,),
-  login: config(`${http.LITE}?c=apiuser&a=wxlogin&`, 'GET')
+  login: config(`${http.LITE}?c=apiuser&a=wxlogin&`),
+  getUserInfo: config(`${http.LITE}?c=apiuser&a=mine&`),
+  getHomeConfig: config(`${http.LITE}?c=apihome&a=home&`), // 首页接口
+  getExercise: config(`${http.LITE}?c=apihome&a=topics&`), // 每日练习
+  getShopList: config(`${http.LITE}?c=apihome&a=subjects`), // 获取题库列表
+  getSubjectType: config(`${http.LITE}?c=apihome&a=subjectclass`), // 获取分类接口
+  pay: config(`${http.LITE}?c=apipay&a=pay`), // 获取支付信息
+  getSubjectDetail: config(`${http.LITE}?c=apiSubject&a=newsubjectsdetails`), // 获取科目详情
+  getPayDetail: config(`${http.LITE}?c=apipay&a=pay_detail`), // 获取科目详情
+  setSubject: config(`${http.LITE}?c=apiSubject&a=setsubject`), // 获取科目详情
+  getChapterList: config(`${http.LITE}?c=apiSubject&a=chapters`), // 获取科目详情
+  getChapterDetail: config(`${http.LITE}?c=apisubject&a=topics`), // 获取科目详情
 }
 export const httpObj = http

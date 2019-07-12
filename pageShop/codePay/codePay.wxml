@@ -1,0 +1,8 @@
+<view class="page_gray ui_code_pay">
+  <text class='ui_title'>兑换账户至：小仙</text>
+  <label class='ui_input'>
+    兑换码 <input bindinput='change'></input>
+  </label>
+
+  <button class='btn_code_pay no_border btn {{value?"btn_click":""}}'>确定兑换</button> 
+</view>

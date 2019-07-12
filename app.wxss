@@ -62,3 +62,7 @@
 .no_border::after{
   border: none;
 }
+
+.font_bold {
+  font-family: "PingFangSC-Medium";
+}

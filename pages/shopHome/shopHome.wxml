@@ -2,5 +2,8 @@
   <shopList
     subjects="{{subjects}}"
     shopList="{{shopList}}"
+    bind:choose="chooseCourse"
+    bind:chooseType="chooseType"
+    bind:switch="switchSubject"
     />
 </view>

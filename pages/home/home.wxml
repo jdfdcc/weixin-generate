@@ -1,5 +1,5 @@
 <view class='page_home'>
-  <authButton bind:success="login" text="立即体验" out_class='btn_login no_border'>
-    <button bindtap='login' class='btn_login no_border'>立即体验</button>
+  <authButton bind:success="login" text="开始学习" out_class='btn_login no_border'>
+    <button bindtap='login' class='btn_login no_border'>开始学习</button>
   </authButton>
 </view>

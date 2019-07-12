@@ -1,0 +1,13 @@
+<view class='page_chapter_list'>
+  <view
+    bindtap='toExercise'
+    data-item="{{item}}"
+    wx:for="{{dataList}}"
+    wx:key="{{index}}"
+    class='page_chapter_item'>
+    <view class='left'>
+      <view>{{item.g_name}}</view>
+      <text>{{item.g_question_completed}}/{{item.g_question_total}}</text>
+    </view>
+  </view>
+</view>

@@ -71,8 +71,8 @@ const http = function (key, data, urlData, loadText = '加载中') {
       success: function (res) {
         console.log('返回数据', res)
         const data = res.data;
-        if (+data.status === 0) {
-          if (typeof data.data === 'string') {
+        if (+data.status === 0 || +data.code === 0) {
+          if (data.data && typeof data.data === 'string') {
             data.data = JSON.parse(data.data)
           }
           resolve(data)
@@ -106,11 +106,15 @@ const http = function (key, data, urlData, loadText = '加载中') {
     }
     // 获取登陆code传入到后台
     APP.getCode().then(code => {
+      const token = store.getState().base.token;
       opt.header["code"] = code;
+      opt.header['token'] = token;
       opt.header['Access-Control-Max-Age'] = '86400';
       opt.header['resource'] = 'orderLite';
-      const token = store.getState().base.token;
-      opt.url += `&code=${code}&token=${token}`;
+      
+      console.log('token--', token)
+      opt.url += `&token=${token}&code=${code}`;
+      // opt.data && (opt.data.code = code);
       let requestTask = wx.request(opt)
     })
   })

@@ -8,16 +8,19 @@ import { httpObj } from '../api/api.js';
 function updateUserInfo(cb) {
   wx.getUserInfo({
     success: function (res) {
-      console.log('用户信息', res)
       if (res.errMsg === 'getUserInfo:ok') {
         const userInfo = JSON.parse(res.rawData);
+        console.log(userInfo)
         updateUser(userInfo);
-        cb && cb()
+        cb && cb(userInfo)
       }
     }
   })
 }
 
+/**
+ * login
+ */
 const login = function login () {
   http('login').then(res => {
     updateToken(res.data.session_key);
@@ -48,9 +51,31 @@ const compareArray = function (array = [], array2 = []) {
   }
 
   return true
-
 }
+
+/**
+ * 首页接口
+ */
+const getHomeConfig = function (cb) {
+  http('getHomeConfig').then(res => {
+    console.log(res)
+    cb && cb(res.data)
+  })
+}
+
+/**
+ * get user info from wechat
+ */
+const getUserInfo = function (cb) {
+  http('getUserInfo').then(res => {
+    console.log('用户信息', res);
+  })
+  updateUserInfo(cb)
+}
+
 export default {
   compareArray,
-  login
+  login,
+  getHomeConfig,
+  getUserInfo,
 }

@@ -63,6 +63,14 @@
   },
 
   ,
+  {
+    "iconPath": "./assets/images/tab/account.png",
+    "selectedIconPath": "./assets/images/tab/account_active.png",
+    "pagePath": "pages/account/account",
+    "text": "我的"
+  }
+
+  ,
       {
         "iconPath": "./assets/images/tab/account.png",
         "selectedIconPath": "./assets/images/tab/account_active.png",

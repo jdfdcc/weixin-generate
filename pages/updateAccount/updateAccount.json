@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "更新用户信息",
+  "usingComponents": {
+    "ui-form-item": "../../../common/components/formItem/ui-form-item"
+  }
+}

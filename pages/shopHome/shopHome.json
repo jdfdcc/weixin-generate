@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "题库",
   "usingComponents": {
     "shopList": "./../../common/components/shopList/shopList"
   }

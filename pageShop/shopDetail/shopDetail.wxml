@@ -1,0 +1,20 @@
+<view class='page_gray'>
+  <image
+    wx:for="{{shopDetail.g_details}}"
+    wx:key="{{index}}"
+    class='page_detail'
+    src='{{item}}'
+    mode='widthFix'
+    ></image>
+
+  <view style='height:150rpx;'></view>
+  <view class='page_footer_buy'>
+    <view class='left'>
+      <text class='money'>{{shopDetail.g_money || '--'}}</text>
+      <text class='waring'>已有{{shopDetail.g_buycount}}人购买</text>
+    </view>
+    <button class='no_border btn_active' bindtap='toPay'>
+      立即抢购
+    </button>
+  </view>
+</view>

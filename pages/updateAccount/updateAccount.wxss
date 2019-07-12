@@ -1,0 +1,111 @@
+.header{
+  height: 300rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: PingFangSC-Medium;
+  font-size: 34rpx;
+  color: #333333;
+}
+
+.cut_line{
+  height: 20rpx;
+  background:#F3F4F6;
+  border: none;
+}
+
+.no_bottom_border{
+  border: none;
+}
+
+.card:last-child{
+  border: none;
+}
+.card:first-child{
+  border: none;
+}
+
+.card_area{
+  background: #fff;
+}
+
+.header image{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+
+.foot_area{
+  height: 181rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot_area button{
+  width: 300rpx;
+  height: 80rpx;
+  color: #057AFF;
+  font-size: 30rpx;
+  border: 1rpx solid #057AFF;
+  box-shadow: 0 14rpx 18rpx -10rpx rgba(0,146,212,0.30);
+  border-radius: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button image{
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.btn_add_customer {
+  width: 100vw;
+  height: 100rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 100rpx;
+  background-image: linear-gradient(90deg, #03B3FF 0%, #057AFF 100%);
+  border-radius: 0rpx;
+}
+.btn_follow button{
+  margin-right: 0rpx;
+  background: #fff;
+  position: relative;
+  font-size: 30rpx;
+  text-align: right;
+  flex: 1;
+  padding-left: 0rpx;
+  font-family: PingFangSC-Regular;
+  color: #057AFF;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+.btn_follow{
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.btn_follow image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+
+.picker_address{
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.active_address{
+  color: #333333;
+}

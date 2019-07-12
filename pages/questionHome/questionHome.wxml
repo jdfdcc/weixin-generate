@@ -7,7 +7,7 @@
           距离考试 <text>--</text> 天
         </view>
         <view class='kemu'>
-        当前题库: <text>{{homeObj.currentQB.name}}</text>
+        当前题库: <text>{{homeObj.currentQB.name || '未选择'}}</text>
         </view>
       </view>
     </view>
@@ -15,7 +15,7 @@
       <view class='left'>
         <text>{{homeObj.studyCount}}</text>位同学正在刷题
       </view>
-      <button bindtap='toItem' class='right no_border btn'>
+      <button bindtap='chooseSub' class='right no_border btn'>
         选择题库
         <image src='http://wap.chaobenxueyuan.com/images/home/down.png'></image>
       </button>

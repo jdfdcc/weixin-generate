@@ -1,2 +1,36 @@
-<!--pages/account/account.wxml-->
-<text>pages/account/account.wxml</text>
+<view class='page_gray'>
+  <view bindtap='toUpdateAccount' class='page_center'>
+    <view class='header_info'>
+      <image src='{{wxUser.avatarUrl}}'></image>
+      <view class='info'>
+        <text>{{wxUser.nickName}}</text>
+      </view>
+    </view>
+
+    <view class='opt_right' bindtap='toEditUserInfo'>
+      <image class='right_icon' mode="widthFix" src='https://static.iyunbao.com/website/health/iybApp/iyb_mpvue/policyManage/right_icon_gray.png'></image>
+    </view>
+  </view>
+  <view style='height: 20rpx;'>
+  </view>
+  <view class='card_area'>
+    <label
+      for="{{item.share?'share_btn':''}}"
+      class='item active_gray'
+      data-item='{{item}}'
+      bindtap='toUrl'
+      wx:for="{{itemList}}" wx:key="{{index}}">
+      <view class='left'>
+        <image src='{{item.icon}}' class='icon'></image>
+        <text>{{item.leftText}}</text>
+      </view>
+      <view class='right'>
+        <text wx:if="{{item.type == 1}}">{{renewalPolicyList.length}}{{item.rightText}}</text>
+        <text wx:elif="{{item.type == 2}}">{{familyList.length + 1}}{{item.rightText}}</text>
+        <text wx:else> {{item.rightText}}</text>
+        <image class='right_icon' src='https://static.iyunbao.com/website/health/iybApp/iyb_mpvue/policyManage/right_icon_gray.png'></image>
+      </view>
+      <button id="share_btn" data-id='share' wx:if="{{item.share}}" class='share_btn' open-type='share'></button>
+    </label>
+  </view>
+</view>

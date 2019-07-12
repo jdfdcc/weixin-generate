@@ -1,0 +1,25 @@
+.page_chapter_item {
+  box-shadow: 0 5rpx 10rpx #e6e6e6;
+  height: 180rpx;
+  display: flex;
+  margin: 50rpx 30rpx;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+
+.btn_right {
+  height: 90rpx;
+  margin: 0;
+}
+
+.page_chapter_item .left {
+  font-size: 28rpx;
+  color: gray;
+}
+
+.page_chapter_item .left view {
+  font-weight: 800;
+  font-size: 30rpx;
+  color: black;
+}

@@ -1,0 +1,37 @@
+.page_pay_status {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page_pay_status image {
+  width: 45vw;
+  margin-bottom: 40rpx;
+  margin-top: 100rpx;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(248, 196, 9);
+  font-size: 50rpx;
+  font-family: "PingFangSC-Medium";
+}
+.content .icon {
+  color: #999;
+  font-size: 40rpx;
+  margin-bottom: 40rpx;
+}
+.btn_end {
+  margin-top: 33vh;
+  width: 320rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  background: linear-gradient( #F8D253, rgb(248, 196, 9) ); 
+}
+.fail{
+  color: rgb(135, 135, 135);
+}

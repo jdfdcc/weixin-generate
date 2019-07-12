@@ -1,0 +1,34 @@
+.ui_code_pay .ui_title{
+  height: 100rpx;
+  padding-left: 30rpx;
+  color: rgb(160, 160, 160);
+  font-size: 28rpx;
+  line-height: 100rpx;
+}
+.ui_input {
+  background: #fff;
+  border-radius: 5rpx;
+  margin: 0 30rpx;
+  display: flex;
+  height: 100rpx;
+  padding-left: 20rpx;
+  align-items: center;
+}
+.ui_input input {
+  margin-left: 20rpx;
+  flex: 1;
+}
+.btn_code_pay {
+  margin-top: 130rpx;
+  border-radius: 50rpx;
+  width: 80vw;
+  background: rgb(206, 206, 206);
+  color: #fff;
+  pointer-events: none;
+}
+.btn_click {
+  pointer-events: auto;
+  color: black;
+  background-image: linear-gradient(90deg, rgb(242,207,135), rgb(245,179,69));
+  
+}

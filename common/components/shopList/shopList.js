@@ -1,4 +1,3 @@
-// common/components/shopList/shopList.js
 Component({
   /**
    * 组件的属性列表
@@ -7,18 +6,9 @@ Component({
     subjects: {
       type: Array,
       value: [{
-        title: '首页',
-        id: '9999',
-        type: 'all' // 类型
-      }],
-      observer: function(newVal, oldVal) {
-        newVal.unshift({
-          title: '首页',
-          id: '9999',
-          type: 'all' // 类型
-        });
-        this.setData({ subjects: newVal })
-      }
+        g_class: '全部',
+        g_id: ''
+      }]
     },
     shopList: {
       type: Array,
@@ -26,17 +16,40 @@ Component({
     }
   },
   data: {
-    chooseId: '9999'
+    chooseId: ''
   },
   methods: {
     /**
-     * 选择客户
+     * 选择科目类别
      */
-    chooseSubJect: function (e) {
+    chooseSubject: function (e) {
       const item = e.currentTarget.dataset.item;
       this.setData({
-        chooseId: item.id
+        chooseId: item.g_id
       });
+      this.triggerEvent('chooseType', item);
+    },
+
+    /**
+     * 选择题库
+     */
+    chooseItem: function (e) {
+      const item = e.currentTarget.dataset.item;
+      this.triggerEvent('choose', item);
+    },
+
+    chooseSubjectToStudy: function (e) {
+      const item = e.currentTarget.dataset.item;
+      wx.showModal({
+        title: '切换科目',
+        content: `确定切换到${item.title}科目吗？`,
+        success: res => {
+          // 科目切换
+          if (res.confirm) {
+            this.triggerEvent('switch', item);
+          }
+        }
+      })
     }
   }
 })

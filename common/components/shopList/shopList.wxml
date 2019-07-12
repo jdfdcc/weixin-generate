@@ -11,30 +11,45 @@
         bindtap='chooseSubJect'
         data-item='{{item}}'
         >
-        <text class='{{item.id === chooseId ? "item_choose" : ""}}'>{{item.title}}       </text>
+        <text class='{{item.g_id === chooseId ? "item_choose" : ""}}'>{{item.g_class}}       </text>
       </view>
   </scroll-view>
   </view>
   <!-- 商品列表 -->
   <view class='shop_area'>
-    <view class='shop_item' wx:for="{{shopList}}" wx:key="{{index}}">
-      <view class='left'>
-        <image src='{{item.src}}' />
+    <view class='shop_item'
+          wx:for="{{shopList}}"
+          wx:key="{{index}}"
+          data-item='{{item}}'
+          bindtap='chooseItem'
+      >
+      <view class='header'>
+        <view class='left'>
+          <image mode='widthFix' src='{{item.thumbnail}}' />
+        </view>
+
+        <view class='center'>
+          <view class='name'>{{item.title}}</view>
+          <view class='context'>
+            <rich-text nodes="{{item.content}}"></rich-text>
+          </view>
+          <view class='count'>共计 {{item.count}} 道题</view>
+        </view>
       </view>
 
-      <view class='center'>
-        <view class='name'>{{item.title}}</view>
-        <view class='context'>{{item.content}}</view>
-        <view class='count'>共计 {{item.count}} 道题</view>
-      </view>
-
-      <view class='right'>
-        <text class='price'>
+      <view class='footer' >
+        <view class='price' wx:if="{{!item.hasBuy}}">
           ¥{{item.price}}
-        </text>
-        <text>{{item.beashCount}}人刷</text>
+        </view>
+        <view class='btn' wx:else>
+          <button
+            data-item='{{item}}'
+            catchtap='chooseSubjectToStudy'
+            class='btn_study'>进入学习</button>
+        </view>
+        <view wx:if="{{item.beashCount > 0}}">{{item.beashCount}}人刷</view>
       </view>
-
     </view>
+
   </view>
 </view>

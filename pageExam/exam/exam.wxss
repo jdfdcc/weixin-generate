@@ -73,6 +73,21 @@
   padding-top: 10rpx;
 }
 
+.answer_info {
+  display: flex;
+  align-items: center;
+}
+.answer_info.error{
+  color: red;
+}
+.answer_info.right{
+  color: rgb(9, 187, 7);
+}
+.answer_info icon {
+  height: 78rpx;
+  margin-right: 5rpx;
+}
+
 .text{
   min-height: 500rpx;
   color: rgb(43, 43, 43);

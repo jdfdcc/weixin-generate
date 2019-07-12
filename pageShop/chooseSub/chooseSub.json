@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择题库",
+  "usingComponents": {
+    "shopList": "./../../common/components/shopList/shopList"
+  }
+}
