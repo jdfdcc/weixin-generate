@@ -28,7 +28,7 @@ Page({
   getObjectDetail() {
     const { quesIndex } = this.data
     const { id, sid } = this.options;
-    examHandler.getChapterDetail({ sid, cid: id }, data => {
+    examHandler.getChapterDetail({pageSize: 500, sid, cid: id }, data => {
       const question = data[quesIndex];
       this.setData({ question, questionsList: data })
     })
@@ -100,6 +100,13 @@ Page({
         optiontype: 3
       });
       this.showAnswer();
+
+      if (!question.isRight) {
+        console.log(question);
+        // examHandler.answerQuestion({
+        //   type: 2
+        // })
+      }
     }
   },
 

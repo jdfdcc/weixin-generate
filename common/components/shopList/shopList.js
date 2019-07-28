@@ -22,7 +22,7 @@ Component({
     /**
      * 选择科目类别
      */
-    chooseSubject: function (e) {
+    chooseSubJect: function (e) {
       const item = e.currentTarget.dataset.item;
       this.setData({
         chooseId: item.g_id

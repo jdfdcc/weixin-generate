@@ -36,5 +36,9 @@ export default {
   setSubject: config(`${http.LITE}?c=apiSubject&a=setsubject`), // 获取科目详情
   getChapterList: config(`${http.LITE}?c=apiSubject&a=chapters`), // 获取科目详情
   getChapterDetail: config(`${http.LITE}?c=apisubject&a=topics`), // 获取科目详情
+
+  answerQuestion: config(`${http.LITE}?c=apiSubject&a=dosubject`), // 收集答题情况
+
+  api: config(`${http.LITE}`), // 公共地址
 }
 export const httpObj = http

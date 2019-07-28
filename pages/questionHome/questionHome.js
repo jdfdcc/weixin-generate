@@ -25,7 +25,7 @@ Page(ReduxConnect({
     switch (item.id){
       case '2':
         wx.navigateTo({
-          url: '/pageExam/exam/exam',
+          url: '/pageExam/makeExam/makeExam',
         });
         break;
       case '3':
