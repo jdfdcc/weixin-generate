@@ -38,7 +38,7 @@ export default {
    * type 0历史 1收藏 2错题 3笔记
    * answer 
    */
-  answerQuestion: function (req) {
+  collectQuestion: function (req, cb) {
     http('answerQuestion', req).then(res => {
       console.log('answerQuestion', res);
       cb && cb(res.data);

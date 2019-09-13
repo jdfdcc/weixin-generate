@@ -6,8 +6,16 @@
     wx:key="{{index}}"
     class='page_chapter_item'>
     <view class='left'>
-      <view>{{item.g_name}}</view>
-      <text>{{item.g_question_completed}}/{{item.g_question_total}}</text>
+      <view class="title">
+        <text>第{{index + 1}}章</text>
+        {{item.g_name}}
+      </view>
+      <view class="content">
+        我是一段小小的内容描述
+      </view>
+      <text>
+        {{item.g_question_completed}}/{{item.g_question_total}}
+      </text>
     </view>
   </view>
 </view>

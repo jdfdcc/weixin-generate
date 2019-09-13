@@ -1,0 +1,5 @@
+<view catchtouchmove="preventD" class='modal' wx:if="{{showModal}}" bindtap='clickModal'>
+  <view bind:animationend="animationend" catchtap='closeModal' class='animated_position {{animated}} {{position}}'>
+    <slot />
+  </view>
+</view>

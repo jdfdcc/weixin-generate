@@ -18,9 +18,9 @@
         wx:for="{{question.options}}"
         wx:key="{{index}}"
         class='answer_item {{item.choose ? "choose" : ""}}'>
-        <view class='answer_title font_bold {{question.type == 0 ? "radio" : ""}}'>
+        <!-- <view class='answer_title font_bold {{question.type == 0 ? "radio" : ""}}'>
           {{item.value}}
-        </view>
+        </view> -->
         <view class='answer_value'>
           {{item.title}}
         </view>

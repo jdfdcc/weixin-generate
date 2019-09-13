@@ -33,6 +33,11 @@ Page(ReduxConnect({
           url: `/pageExam/chapterList/chapterList?id=${homeObj.currentQB.id}`,
         });
         break;
+      case '5':
+        wx.navigateTo({
+          url: `/pages/corrents/corrents?id=${homeObj.currentQB.id}`,
+        });
+        break;
     }
   },
   onShow: function () {

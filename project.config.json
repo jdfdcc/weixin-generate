@@ -17,7 +17,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.4",
+	"libVersion": "2.7.7",
 	"appid": "wxcb03144d55fc82c4",
 	"projectname": "%E8%B6%85%E6%9C%AC%E5%AD%A6%E9%99%A2",
 	"simulatorType": "wechat",
@@ -40,27 +40,28 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
-					"name": "调试专用",
-					"pathName": "pageExam/chapterList/chapterList",
+					"name": "pageShop/chooseSub/chooseSub",
+					"pathName": "pageShop/chooseSub/chooseSub",
 					"query": "id=80",
 					"scene": null
 				},
 				{
 					"id": 1,
-					"name": "支付",
-					"pathName": "pageExam/makeExam/makeExam",
-					"query": "policyId=88B932000029810413&policyStatus=2",
+					"name": "pageShop/shopPay/shopPay",
+					"pathName": "pageShop/shopPay/shopPay",
+					"query": "sid=83",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "demo",
-					"pathName": "pages/demo/demo",
-					"query": "policyId=88B932000029810413&policyStatus=2"
+					"id": 2,
+					"name": "pageExam/chapterList/chapterList",
+					"pathName": "pageExam/chapterList/chapterList",
+					"query": "id=80",
+					"scene": null
 				},
 				{
 					"id": -1,

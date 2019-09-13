@@ -30,15 +30,17 @@
 }
 
 .shop_area{
-  padding: 20rpx;
+  /* padding: 20rpx; */
+  padding-top: 20rpx;
 }
 .shop_item {
   background: #fff;
   margin: 0 auto;
-  border-radius: 10rpx;
-  box-shadow: 1px 1px 10rpx rgba(1, 1, 1, .1);
+  /* border-radius: 10rpx; */
+  /* box-shadow: 1px 1px 10rpx rgba(1, 1, 1, .1); */
+  border-bottom: 1px solid #e0e0e0;
   /* min-height: 291rpx; */
-  margin-top: 20rpx;
+  /* margin-top: 20rpx; */
   display: flex;
   flex-direction: column;
   padding: 20rpx;

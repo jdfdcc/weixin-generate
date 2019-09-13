@@ -1,11 +1,18 @@
 .page_chapter_item {
-  box-shadow: 0 5rpx 10rpx #e6e6e6;
-  height: 180rpx;
+  min-height: 130rpx;
   display: flex;
-  margin: 50rpx 30rpx;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30rpx;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page_chapter_item .content {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #999999;
+  letter-spacing: 0;
+  margin-top: 15rpx;
 }
 
 .btn_right {
@@ -18,7 +25,7 @@
   color: gray;
 }
 
-.page_chapter_item .left view {
+.page_chapter_item .left .title {
   font-weight: 800;
   font-size: 30rpx;
   color: black;

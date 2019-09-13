@@ -37,8 +37,15 @@ export default {
   getChapterList: config(`${http.LITE}?c=apiSubject&a=chapters`), // 获取科目详情
   getChapterDetail: config(`${http.LITE}?c=apisubject&a=topics`), // 获取科目详情
 
-  answerQuestion: config(`${http.LITE}?c=apiSubject&a=dosubject`), // 收集答题情况
+  answerQuestion: config(`${http.LITE}?c=apiSubject&a=dosubject`,'GET', false, false, false, false), // 收集答题情况
 
   api: config(`${http.LITE}`), // 公共地址
+
+  // 我的错题
+  corrents: config(`${http.LITE}?c=apiSubject&a=corrents`),
+  correntdetails: config(`${http.LITE}??c=apiSubject&a=correntdetails`),
+  // 全真模拟
+  simulations: config(`${http.LITE}?c=apiSubject&a=simulations`),
+
 }
 export const httpObj = http

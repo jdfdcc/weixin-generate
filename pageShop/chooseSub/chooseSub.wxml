@@ -1,5 +1,6 @@
 <view wx:if="{{shopList.length > 0}}" class='page_gray'>
   <shopList
+    type="2"
     subjects="{{subjects}}"
     shopList="{{shopList}}"
     bind:choose="chooseCourse"

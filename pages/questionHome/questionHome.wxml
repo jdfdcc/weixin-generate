@@ -1,7 +1,8 @@
 <view class='page_home page_gray'>
   <view class='main_header'>
     <view class='top'>
-      <image src='{{user.avatarUrl || headerImage}}'></image>
+      <!-- <image src='{{user.avatarUrl || headerImage}}'></image> -->
+      <open-data class="image" type="userAvatarUrl"></open-data>
       <view class='right'>
         <view class='waring'>
           距离考试 <text>--</text> 天
@@ -16,8 +17,7 @@
         <text>{{homeObj.studyCount}}</text>位同学正在刷题
       </view>
       <button bindtap='chooseSub' class='right no_border btn'>
-        选择题库
-        <image src='http://wap.chaobenxueyuan.com/images/home/down.png'></image>
+        <text>选择题库</text>
       </button>
     </view>
 

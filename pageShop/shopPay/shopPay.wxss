@@ -1,16 +1,18 @@
 .ui_header_info {
   height: 150rpx;
   background: rgb(32, 22, 22);
+  /* background: rgb(254, 207, 20); */
   display: flex;
   align-items: center;
   color: #fff;
   padding-left: 30rpx;
 }
-.ui_header_info image {
+.ui_header_info .head-image {
   height: 100rpx;
   width: 100rpx;
   border-radius: 50%;
   margin-right: 24rpx;
+  overflow: hidden;
 }
 .ui_choose_header {
   display: flex;
@@ -29,28 +31,28 @@
 }
 
 .ui_scroll_content {
-  height: 33vw;
+  /* height: 33vw; */
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color: #fff;
-  overflow-x: scroll;
-  white-space: nowrap;
   line-height: 90rpx;
   font-size: 30rpx;
-  padding:0 30rpx;
   box-sizing: border-box;
+  justify-content: flex-start;
 }
 
 .scroll_item {
-  min-width: 28vw;
-  display: inline-flex;
+  flex: 0 0 28vw;
   height: 28vw;
+  margin-left: 4vw;
+  display: inline-flex;
+  margin-top: 20rpx;
   text-align: center;
   border-bottom: none;
   transition: all .1s linear;
   background: rgb(245, 245, 245);
   border-radius: 10rpx;
-  margin-right: 10rpx;
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
@@ -62,7 +64,7 @@
   height: 60rpx;
 }
 .item_choosed {
-  background: linear-gradient(0deg,rgb(245, 232, 198), rgb(250, 245, 231))
+  background: #FFE11C;
 }
 .scroll_item image {
   width: 45rpx;
@@ -108,6 +110,6 @@
   width: 90vw;
   margin-left: 5vw;
   border-radius: 10rpx;
-  background-image: linear-gradient(90deg, rgb(242,207,135), rgb(245,179,69));
+  background: #FFE11C;
   box-shadow: 1rpx 10rpx 10rpx #e0e0e0;
 }

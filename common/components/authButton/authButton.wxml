@@ -1,4 +1,0 @@
-<button class="out_class" wx:if = "{{!hasAuth }}" bindgetuserinfo="getUserInfo"  open-type="{{type}}">{{text}}</button>
-<view wx:else>
-  <slot></slot>
-</view>

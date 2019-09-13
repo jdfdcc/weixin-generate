@@ -9,9 +9,9 @@ Page({
   },
 
   toExercise: function (e) {
-    const item = e.currentTarget.dataset.item;
+    const { g_question_completed, g_sid, g_id } = e.currentTarget.dataset.item;
     wx.navigateTo({
-      url: `/pageExam/makeExam/makeExam?id=${item.g_id}&sid=${item.g_sid}&type=subject`,
+      url: `/pageExam/makeExam/makeExam?id=${g_id}&sid=${g_sid}&type=subject&index=${g_question_completed}`,
     })
   },
   onReady: function () {

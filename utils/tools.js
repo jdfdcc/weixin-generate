@@ -103,7 +103,7 @@ const _format = function (date, fmt) {
  * @param pattern 格式化模式
  */
 export const toDate = (date, pattern = 'yyyy-MM-dd') => {
-  if (!date) return '22'
+  if (!date) return ''
   if (!pattern) {
     pattern = 'yyyy-MM-dd HH:mm:ss'
   }
@@ -176,7 +176,6 @@ export const drawImage = function (headImgUrl, posterImgUrl, qrCodeImgUrl, nickN
       destHeight: 1344,
       canvasId: 'myCanvas',
       success: function (res) {
-        console.log(res.tempFilePath)
         wx.hideLoading()
         wx.previewImage({
           current: res.tempFilePath,
@@ -191,7 +190,6 @@ export const drawImage = function (headImgUrl, posterImgUrl, qrCodeImgUrl, nickN
  * @name 对比两个对象是否相等
  */
 export const compareObj = function (obj, obj2) {
-  // console.log(obj, obj2)
   // 1 当传入对象的类型不相同的时候 则返回false
   if (typeof obj !== typeof obj2) return false
 
@@ -202,7 +200,6 @@ export const compareObj = function (obj, obj2) {
   if (Array.isArray(obj)) return JSON.stringify(obj) === JSON.stringify(obj2)
 
   if (type === 'object') {
-    // console.log(obj, obj2)
     // return JSON.stringify(obj) === JSON.stringify(obj2)
     for (let key in obj) {
       if (!compareObj(obj[key], obj2[key])) return false
@@ -359,13 +356,14 @@ export const isID = (idStr = '') => {
   }
 
   let sex = oldCode.length == 15 ? oldCode.substr(14, 1) % 2 : oldCode.substr(16, 1) % 2;
-  sex == 0 ? sex = 2 : sex = 1;
+  sex == 0 ? sex = 2 : sex = 1; // 1M2F
   const birthDay = oldCode.length == 15 ? `19${oldCode.substr(6, 2)}-${oldCode.substr(8, 2)}-${oldCode.substr(10, 2)}` : `${oldCode.substr(6, 4)}-${oldCode.substr(10, 2)}-${oldCode.substr(12, 2)}`;
   return {
     cityCode: oldCode.substr(0, 4),
     cityDesc: city[oldCode.substr(0, 2)],
     birthDay,
     sex,
+    age: dateToAge(birthDay),
   };
 
 };
@@ -374,8 +372,7 @@ export const isID = (idStr = '') => {
 /**
  * 生成随机串
  */
-export const uuid = function (len) {
-  len = len || 32;
+export const uuid = function (len = 32) {
   let $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
   let maxPos = $chars.length;
   let pwd = '';
@@ -433,3 +430,63 @@ export const getCnDateText = function (lastVisitTime = '') {
   }
   return text;
 }
+
+
+export const throttle = function (obj, method, content, time = 16) {
+  clearTimeout(obj.tid);
+  obj.tid = setTimeout(function () {
+    obj.tid = undefined;
+    method(content)
+  }, time)
+}
+
+// export const throttle = function throttle(func, wait) {
+//   let previous = 0;
+//   return function () {
+//     let now = Date.now();
+//     let context = this;
+//     let args = arguments;
+//     if (now - previous > wait) {
+//       func.apply(context, args);
+//       previous = now;
+//     }
+//   }
+// }
+
+/**
+ * 清除对象中为null活着undefind的数值
+ */
+export const clearObj = function (obj) {
+  const tempObj = deepCopy(obj);
+  for (const key in tempObj) {
+    if (tempObj[key] === null || tempObj[key] === undefined) {
+      delete tempObj[key]
+    };
+  }
+
+  return tempObj;
+}
+
+/**
+ * 信息脱敏方法
+ * @param {*} str
+ * @param {*} type
+ */
+export const tmStr = (str, type) => {
+  let tempStr = '';
+  switch (type) {
+    case 'name':
+      tempStr = str.replace(/.*(.+)/, '**$1');
+      break;
+    case 'card':
+      tempStr = str.replace(/^(.{4,4}).*(.{4,4})$/, '$1*****$2');
+      break;
+    case 'phone':
+      tempStr = str.replace(/^(.{3}).*(.{3})$/, '$1*****$2');
+      break;
+    case "certiNo":
+      tempStr = str.replace(/^(.{4,4}).*(.{1,1})$/, '$1*************$2');
+      break;
+  }
+  return tempStr;
+};

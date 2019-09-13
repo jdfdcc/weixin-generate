@@ -3,6 +3,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    type: {
+      type: String,
+      value: 1, // 1表示购买 2 表示 选择
+    },
     subjects: {
       type: Array,
       value: [{

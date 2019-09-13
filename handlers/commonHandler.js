@@ -22,9 +22,11 @@ function updateUserInfo(cb) {
  * login
  */
 const login = function login () {
-  http('login').then(res => {
+  http({
+    api: 'login',
+    noLogin: true,
+  }).then(res => {
     updateToken(res.data.session_key);
-    updateOpenId(res.data.openid);
     updateUserInfo(res => {
       wx.switchTab({
         url: '/pages/questionHome/questionHome',

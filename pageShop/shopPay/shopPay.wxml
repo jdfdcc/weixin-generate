@@ -1,6 +1,8 @@
 <view class="ui_header_info">
-  <image src='{{user.avatarUrl}}'></image>
-  <text>{{user.nickName}}</text>
+  <!-- <image src='{{user.avatarUrl}}'></image> -->
+  <open-data class="head-image" type="userAvatarUrl"></open-data>
+  <open-data type="userNickName"></open-data>
+  <!-- <text>{{user.nickName}}</text> -->
 </view>
 
 <view class='ui_choose_header'>
@@ -11,9 +13,7 @@
   </view>
 </view>
 
-<scroll-view
-  scroll-x
-  style="width: 100%"
+<view
   class='ui_scroll_content'>
   <view
     wx:for="{{chooseList}}"
@@ -23,15 +23,15 @@
     class='scroll_item {{chooseItem.g_id === item.g_id ? "item_choosed" : ""}}'>
     <image wx:if="{{chooseItem.g_id === item.g_id}}" src='http://wap.chaobenxueyuan.com/images/icon/check.svg' />
     <image wx:else src='http://wap.chaobenxueyuan.com/images/icon/uncheck.svg' />
-    <text>{{item.g_time}}</text>
-    <text>￥{{item.g_fee}}</text>
+    <text style="font-size: 40rpx">{{item.g_time}}</text>
+    <text style="font-size: 30rpx">￥{{item.g_fee}}</text>
   </view>
-</scroll-view>
+</view>
 
 
 <view class='ui_pay_info'>
   <view>
-    需支付：{{chooseItem.g_fee}} 元
+    需支付：{{chooseItem.g_fee || '--'}} 元
   </view>
 
   <view class='ui_pay_waring'>

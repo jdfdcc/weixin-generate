@@ -6,15 +6,16 @@
 }
 .main_header .top  {
   display: flex;
-  height: 214rpx;
+  height: 210rpx;
   align-items: center;
 }
-.top image{
-  width: 150rpx;
-  height: 150rpx;
+.top .image{
+  width: 128rpx;
+  height: 128rpx;
   border-radius: 50%;
   background: #fff;
   margin: 0rpx 33rpx 0rpx 19rpx;
+  overflow: hidden;
 }
 .top .right {
   display: flex;
@@ -54,11 +55,18 @@
 .center .right{
   font-size: 30rpx;
   margin-right: 0rpx;
-  background: transparent;
+  background: rgba(255, 240, 40, .6);
+  border-radius: 50rpx;
 }
-.center .right image{
-  height: 20rpx;
-  width: 26rpx;
+.center .right text::after{
+  content: '';
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  display: inline-block;
+  border-width: 14rpx;
+  border-radius: 5rpx;
+  border-color: transparent transparent transparent black;
+  border-style: solid;
 }
 
 .main_header .end{

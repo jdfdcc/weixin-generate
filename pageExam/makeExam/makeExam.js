@@ -37,8 +37,11 @@ Page({
 
   // 答题
   toAnswer: function (e) {
-    console.log(e)
-    const { question } = this.data;
+    const { question, optiontype } = this.data;
+
+    if (optiontype === 3) {
+      return;
+    }
     const { item, index } = e.currentTarget.dataset;
     question.optiontype = 1;
     const { type, options } = question;
@@ -54,8 +57,6 @@ Page({
       question,
       optiontype: 1,
     });
-
-    // wx.vibrateShort();
   },
 
 
@@ -88,9 +89,11 @@ Page({
     } else {
       const { options, type, rightAnswer } = question;
       question.isRight = false;
+      let myAnswer;
       if (+type === 0) {
         options.forEach(tempItem => {
           if (tempItem.choose) {
+            myAnswer = tempItem.value;
             question.isRight = tempItem.value == rightAnswer;
           }
         })
@@ -101,12 +104,14 @@ Page({
       });
       this.showAnswer();
 
-      if (!question.isRight) {
-        console.log(question);
-        // examHandler.answerQuestion({
-        //   type: 2
-        // })
-      }
+      // 收集题目
+      examHandler.collectQuestion({
+        type: 2,
+        sid: question.sid,
+        cid: question.cid,
+        tid: question.tid,
+        answer: myAnswer,
+      })
     }
   },
 

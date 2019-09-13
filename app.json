@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/home/home",
     "pages/questionHome/questionHome",
     "pages/shopHome/shopHome",
     "pages/demo/demo",
     "pages/account/account",
     "pages/func/func",
-    "pages/updateAccount/updateAccount"
+    "pages/updateAccount/updateAccount",
+    "pages/corrents/corrents"
   ],
   "subPackages": [
     {
@@ -50,6 +50,10 @@
         "text": "题库"
       }
     ]
+  },
+
+  "usingComponents": {
+    "ui-modal-alert": "./common/components/ui-modal-alert/ui-modal-alert"
   },
   "networkTimeout": {
     "request": 10000,

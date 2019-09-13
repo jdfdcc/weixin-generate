@@ -12,7 +12,6 @@ Page(ReduxConnect({
     chooseList: []
   },
   chooseItem: function (e) {
-    console.log(e.currentTarget.dataset);
     const { item } = e.currentTarget.dataset;
     this.setData({
       chooseItem: item,
@@ -21,7 +20,6 @@ Page(ReduxConnect({
 
   toPay: function () {
     const { chooseItem } = this.data;
-    
     let req = {
       sid: chooseItem.g_subject_id,
       sfid: chooseItem.g_id,
