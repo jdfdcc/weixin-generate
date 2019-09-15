@@ -9,6 +9,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    pogress: 0.3,
+    showChoose: false,// 答题
     questionsList: [],
     isRight: false, // 用户是否答对
     quesIndex: 0,
@@ -27,12 +29,35 @@ Page({
 
   getObjectDetail() {
     const { quesIndex } = this.data
-    const { id, sid } = this.options;
-    examHandler.getChapterDetail({pageSize: 500, sid, cid: id }, data => {
+    const { id, sid, index, api } = this.options;
+    this.setData({
+      index,
+    });
+    getApp().http({
+      api,
+      data: {
+        pageNo: 0,
+        pageSize: 500,
+        sid,
+        cid: id
+      },
+    }).then(res => {
+      const { data } = res;
       const question = data[quesIndex];
-      this.setData({ question, questionsList: data })
+      this.setData({
+        question,
+        questionsList: data,
+        showChoose: +index > 1
+      });
     })
-
+    // examHandler.getChapterDetail({pageSize: 500, sid, cid: id }, data => {
+    //   const question = data[quesIndex];
+    //   this.setData({
+    //     question,
+    //     questionsList: data,
+    //     showChoose: +index > 1
+    //   });
+    // })
   },
 
   // 答题
@@ -59,6 +84,22 @@ Page({
     });
   },
 
+  restart() {
+    this.setData({
+      showChoose: false,
+    })
+  },
+
+  continueQuestion() {
+    const { questionsList } = this.data;
+    const { index } = this.options;
+    const question = questionsList[index - 1];
+    this.setData({
+      quesIndex: index - 1,
+      question,
+    });
+    this.restart();
+  },
 
   back: function () {
     wx.showToast({
@@ -124,6 +165,7 @@ Page({
   },
   onLoad: function (options) {
     const { type, id } = options;
+    console.log(options);
     // 随机练习
     if (!id) {
       this.initQuestion();

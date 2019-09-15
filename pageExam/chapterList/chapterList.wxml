@@ -7,15 +7,16 @@
     class='page_chapter_item'>
     <view class='left'>
       <view class="title">
-        <text>第{{index + 1}}章</text>
         {{item.g_name}}
       </view>
       <view class="content">
-        我是一段小小的内容描述
+        <block wx:if="{{type == 1}}">
+          已做 <view class="font_red">{{item.g_question_completed}}</view> 题/共{{item.g_question_total}}题
+        </block>
+        <block wx:else>
+          共计 <view class="font_red">{{item.g_question_completed}}</view> 道错题
+        </block>
       </view>
-      <text>
-        {{item.g_question_completed}}/{{item.g_question_total}}
-      </text>
     </view>
   </view>
 </view>

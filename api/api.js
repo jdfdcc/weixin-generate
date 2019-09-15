@@ -43,7 +43,7 @@ export default {
 
   // 我的错题
   corrents: config(`${http.LITE}?c=apiSubject&a=corrents`),
-  correntdetails: config(`${http.LITE}??c=apiSubject&a=correntdetails`),
+  correntdetails: config(`${http.LITE}?c=apiSubject&a=correntdetails`),
   // 全真模拟
   simulations: config(`${http.LITE}?c=apiSubject&a=simulations`),
 

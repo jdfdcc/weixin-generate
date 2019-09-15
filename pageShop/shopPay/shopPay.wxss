@@ -74,9 +74,9 @@
   top: 10rpx;
 }
 .ui_pay_info {
-  height: 80rpx;
+  height: 230rpx;
   border-bottom: 1px solid #e0e0e0;
-  margin: 100rpx 30rpx 330rpx 30rpx;
+  margin: 30rpx;
 }
 .ui_pay_waring {
   display: flex;

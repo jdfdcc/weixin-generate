@@ -60,14 +60,14 @@
 					"id": 2,
 					"name": "pageExam/chapterList/chapterList",
 					"pathName": "pageExam/chapterList/chapterList",
-					"query": "id=80",
+					"query": "id=80&api=corrents",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "\bfunc",
-					"pathName": "pages/func/func",
-					"query": "id=109",
+					"id": 3,
+					"name": "pageExam/makeExam/makeExam",
+					"pathName": "pageExam/makeExam/makeExam",
+					"query": "id=90&index=10&sid=80&type=subject",
 					"scene": null
 				}
 			]

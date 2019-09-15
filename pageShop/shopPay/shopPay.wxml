@@ -6,7 +6,7 @@
 </view>
 
 <view class='ui_choose_header'>
-  <text>选择会员套餐</text>
+  <text>请选择</text>
   <view class='right'>
     <text>使用兑换码</text>
     <image src='http://wap.chaobenxueyuan.com/images/icon/aui-icon-right.svg'></image>

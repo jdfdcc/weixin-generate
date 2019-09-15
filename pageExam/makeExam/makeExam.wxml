@@ -1,14 +1,28 @@
 <view class='page_gray'>
-  <view class="page_title ">
+  <!-- <view class="page_title ">
     <text class='font_bold'>{{question.type == 0 ? '单选题' : '多选题'}}</text>
     <text class='end'>
       <text style='color:rgb(78,115,255)'>{{quesIndex + 1}}</text>/{{questionsList.length}}
     </text>
+  </view> -->
+
+  <view class="page-progress">
+    <view class="page-progress-item-bg">
+      <view
+        style="width: {{((quesIndex + 1) / questionsList.length) * 100}}%"
+        class="page-progress-item"></view>
+    </view>
+    <view
+      class="page-progress-index">
+      {{quesIndex + 1}}/{{questionsList.length}}
+    </view>
   </view>
 
   <view class='page_content'>
-
-    <view class='qustion_title'>{{question.content}}</view>
+    <view class='qustion_title {{question.type == 0 ? "radio" : ""}}'>
+        <!-- {{question.type == 0 ? '单选题' : '多选题'}} -->
+      {{question.content}}
+    </view>
 
     <view class='question_answer'>
       <label
@@ -79,3 +93,20 @@
 
 </view>
 
+
+<ui-modal-alert show="{{showChoose}}">
+  <view class='modal_auth'>
+    <view class="login_text waring">
+      您上次做题至第{{index}}题，是否继续上次的答题进度?
+    </view>
+    <!--  -->
+    <view class="footer">
+      <view bindtap="restart" class="item">重新开始</view>
+      <!--  -->
+      <view bindtap="continueQuestion" class="item" for="auth_btn">
+        继续答题
+      </view>
+
+    </view>
+  </view>
+</ui-modal-alert>

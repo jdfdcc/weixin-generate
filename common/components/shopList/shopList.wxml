@@ -44,7 +44,7 @@
         <view class='btn' wx:else>
           <button
             data-item='{{item}}'
-            catchtap='chooseSubjectToStudy'
+            catchtap='chooseItem'
             class='btn_study'>进入学习</button>
         </view>
         <view wx:if="{{item.beashCount > 0}}">{{item.beashCount}}人刷</view>

@@ -1,15 +1,12 @@
-import ReduxConnect from '../../assets/libs/redux/ReduxConnect.js';
 import config from '../../config/config.js';
 import commonHandler from '../../handlers/commonHandler.js';
 
-Page(ReduxConnect({
+Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    user: {},
-    headerImage: config.defaultImage,
     homeObj: {},
   },
 
@@ -18,10 +15,17 @@ Page(ReduxConnect({
       url: '/pageShop/chooseSub/chooseSub',
     })
   },
+
   toItem: function (e) {
     const { item } = e.currentTarget.dataset;
     const { homeObj } = this.data;
-    console.log(item)
+    if (!homeObj.currentQB.name) {
+      wx.showToast({
+        title: '请先选择题库',
+        icon: 'none',
+      })
+      return;
+    }
     switch (item.id){
       case '2':
         wx.navigateTo({
@@ -30,12 +34,18 @@ Page(ReduxConnect({
         break;
       case '3':
         wx.navigateTo({
-          url: `/pageExam/chapterList/chapterList?id=${homeObj.currentQB.id}`,
+          url: `/pageExam/chapterList/chapterList?id=${homeObj.currentQB.id}&api=getChapterList`,
         });
         break;
       case '5':
+        wx.showToast({
+          title: '敬请期待...',
+          icon: 'none'
+        });
+        break;
+      case '4':
         wx.navigateTo({
-          url: `/pages/corrents/corrents?id=${homeObj.currentQB.id}`,
+          url: `/pageExam/chapterList/chapterList?id=${homeObj.currentQB.id}&api=corrents`,
         });
         break;
     }
@@ -45,4 +55,4 @@ Page(ReduxConnect({
       this.setData({ homeObj: result })
     })
   },
-}, ['base']))
+})

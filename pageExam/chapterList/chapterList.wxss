@@ -1,18 +1,21 @@
 .page_chapter_item {
-  min-height: 130rpx;
+  min-height: 100rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20rpx 30rpx;
+  padding: 20rpx 50rpx 20rpx 30rpx;
   border-bottom: 1px solid #e0e0e0;
 }
 
-.page_chapter_item .content {
-  font-family: PingFangSC-Regular;
-  font-size: 28rpx;
-  color: #999999;
-  letter-spacing: 0;
-  margin-top: 15rpx;
+.page_chapter_item::after{
+  content: '';
+  display: block;
+  height: 25rpx;
+  width: 25rpx;
+  border: 3rpx solid #e0e0e0;
+  border-left: none;
+  border-bottom: none;
+  transform: rotate(45deg);
 }
 
 .btn_right {
@@ -29,4 +32,14 @@
   font-weight: 800;
   font-size: 30rpx;
   color: black;
+  font-family: PingFangSC-Regular;
+}
+
+.page_chapter_item .content {
+  margin-top: 10rpx;
+}
+
+.font_red {
+  display: inline-block;
+  color: red;
 }
